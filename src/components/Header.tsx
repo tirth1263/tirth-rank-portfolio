@@ -3,6 +3,7 @@ import { useState } from "react";
 import type { User } from "firebase/auth";
 import { profile } from "../data/portfolio";
 import { AuthButton } from "./AuthButton";
+import { ThemeSwitcher } from "./ThemeSwitcher";
 
 const navItems = [
   ["Work", "#work"],
@@ -45,6 +46,7 @@ export function Header({ user, loading }: HeaderProps) {
         <a className="icon-button" href={profile.linkedIn} target="_blank" rel="noreferrer" aria-label="LinkedIn">
           <ExternalLink size={18} />
         </a>
+        <ThemeSwitcher />
         <AuthButton user={user} loading={loading} />
         <button
           className="menu-button"

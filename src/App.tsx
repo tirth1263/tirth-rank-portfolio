@@ -1,6 +1,5 @@
 import { motion, type Transition } from "framer-motion";
 import {
-  ArrowUpRight,
   Bot,
   Code2,
   Download,
@@ -237,22 +236,6 @@ function App() {
                 ))}
               </ul>
             </motion.div>
-          </div>
-        </section>
-
-        <section className="section ai-feature-section" id="ai">
-          <div className="ai-feature">
-            <div>
-              <p className="eyebrow">Futuristic Layer</p>
-              <h2>Firebase AI portfolio assistant with persistent signed-in chat history.</h2>
-              <p>
-                The assistant uses Firebase AI Logic for Gemini responses when the project backend is enabled, then falls back to a local portfolio knowledge model if the model endpoint is unavailable.
-              </p>
-            </div>
-            <a className="secondary-button" href="#contact">
-              <ArrowUpRight size={18} />
-              <span>Start a conversation</span>
-            </a>
           </div>
         </section>
 

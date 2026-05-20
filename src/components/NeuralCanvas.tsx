@@ -41,8 +41,14 @@ export function NeuralCanvas() {
     };
 
     const draw = () => {
+      const styles = getComputedStyle(document.documentElement);
+      const wash = styles.getPropertyValue("--canvas-wash").trim();
+      const teal = styles.getPropertyValue("--teal-rgb").trim() || "56, 231, 200";
+      const amber = styles.getPropertyValue("--amber-rgb").trim() || "246, 197, 83";
+      const rose = styles.getPropertyValue("--rose-rgb").trim() || "255, 93, 143";
+
       ctx.clearRect(0, 0, width, height);
-      ctx.fillStyle = "rgba(4, 7, 10, 0.48)";
+      ctx.fillStyle = wash || "rgba(8, 9, 20, 0.36)";
       ctx.fillRect(0, 0, width, height);
 
       particles.forEach((particle) => {
@@ -62,7 +68,7 @@ export function NeuralCanvas() {
           const distance = Math.sqrt(dx * dx + dy * dy);
           if (distance < 150) {
             const alpha = (1 - distance / 150) * 0.22;
-            ctx.strokeStyle = `rgba(45, 212, 191, ${alpha})`;
+            ctx.strokeStyle = `rgba(${teal}, ${alpha})`;
             ctx.lineWidth = 1;
             ctx.beginPath();
             ctx.moveTo(a.x, a.y);
@@ -73,7 +79,7 @@ export function NeuralCanvas() {
       }
 
       particles.forEach((particle, index) => {
-        const accent = index % 4 === 0 ? "245, 158, 11" : index % 3 === 0 ? "236, 72, 153" : "45, 212, 191";
+        const accent = index % 4 === 0 ? amber : index % 3 === 0 ? rose : teal;
         ctx.fillStyle = `rgba(${accent}, 0.86)`;
         ctx.beginPath();
         ctx.arc(particle.x, particle.y, particle.radius, 0, Math.PI * 2);
