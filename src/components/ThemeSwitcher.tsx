@@ -2,13 +2,13 @@ import { useEffect, useState } from "react";
 
 type ThemeName = "default" | "light" | "dark";
 
-const themes: Array<{ value: ThemeName; label: string }> = [
-  { value: "default", label: "🌈 Default" },
-  { value: "light", label: "☀️ Light" },
-  { value: "dark", label: "🌙 Dark" }
+const themes: Array<{ value: ThemeName; emoji: string; name: string }> = [
+  { value: "default", emoji: "🌈", name: "Default" },
+  { value: "light", emoji: "☀️", name: "Light" },
+  { value: "dark", emoji: "🌙", name: "Dark" }
 ];
 
-const storageKey = "tirth-portfolio-theme";
+const storageKey = "tirth-portfolio-theme-v2";
 
 function getInitialTheme(): ThemeName {
   if (typeof window === "undefined") return "default";
@@ -27,19 +27,22 @@ export function ThemeSwitcher() {
   }, [theme]);
 
   return (
-    <label className="theme-switcher">
-      <span className="sr-only">Portfolio theme</span>
-      <select
-        aria-label="Portfolio theme"
-        value={theme}
-        onChange={(event) => setTheme(event.target.value as ThemeName)}
-      >
-        {themes.map((item) => (
-          <option key={item.value} value={item.value}>
-            {item.label}
-          </option>
-        ))}
-      </select>
-    </label>
+    <div className="theme-switcher" aria-label="Portfolio theme">
+      {themes.map((item) => (
+        <button
+          aria-label={`${item.name} theme`}
+          aria-pressed={theme === item.value}
+          className={theme === item.value ? "active" : ""}
+          key={item.value}
+          onClick={() => setTheme(item.value)}
+          type="button"
+        >
+          <span className="theme-emoji" aria-hidden="true">
+            {item.emoji}
+          </span>
+          <span className="theme-name">{item.name}</span>
+        </button>
+      ))}
+    </div>
   );
 }
