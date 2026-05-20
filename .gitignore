@@ -1,0 +1,20 @@
+node_modules
+dist
+.firebase
+.firebaserc.local
+*.log
+*.tsbuildinfo
+.DS_Store
+Thumbs.db
+/qa
+/vite-dev.log
+/vite-dev.err.log
+/vite.config.js
+/vite.config.d.ts
+
+# Local source files that pre-date the Vite app.
+/Category-*.png
+/DL_Labs*.png
+/RS-1_*.png
+/Robot.jpg
+/tirth-rank-portfolio.html
