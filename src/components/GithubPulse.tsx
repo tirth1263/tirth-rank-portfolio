@@ -152,10 +152,7 @@ export function GithubPulse() {
     <section className="section github-section" id="github">
       <div className="project-code-heading">
         <div>
-          <h2>Projects</h2>
-          <p>
-            Filter the work by technology area, then open the repository to review the implementation.
-          </p>
+          <h2>My Work</h2>
         </div>
         <div className="project-filters" aria-label="Filter projects by category">
           {categories.map((category) => (

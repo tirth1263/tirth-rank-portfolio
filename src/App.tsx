@@ -169,7 +169,7 @@ function App() {
 
         <section className="section work-section" id="work">
           <div className="section-heading">
-            <h2>Experience across immersive systems, AI tooling, and applied analytics.</h2>
+            <h2>Work Experience</h2>
           </div>
           <div className="timeline">
             {work.map((item, index) => {
@@ -202,7 +202,7 @@ function App() {
 
         <section className="section projects-section" id="projects">
           <div className="section-heading">
-            <h2>Systems that combine data, model behavior, and product judgment.</h2>
+            <h2>Projects</h2>
           </div>
           <div className="project-grid">
             {projects.map((project, index) => (
@@ -229,7 +229,7 @@ function App() {
 
         <section className="section tech-section" id="tech">
           <div className="section-heading">
-            <h2>Practical tools for research, prototyping, and production-minded experimentation.</h2>
+            <h2>Technical Stack</h2>
           </div>
           <div className="skill-grid">
             {skillGroups.map((group) => {
@@ -253,7 +253,7 @@ function App() {
 
         <section className="section research-section" id="research">
           <div className="section-heading">
-            <h2>Academic foundation with an applied AI research thread.</h2>
+            <h2>Education & Research</h2>
           </div>
           <div className="education-grid">
             {education.map((item) => {
@@ -299,7 +299,7 @@ function App() {
 
         <section className="section responsibilities-section" id="responsibilities">
           <div className="section-heading">
-            <h2>Leadership, media, and event execution beyond the classroom.</h2>
+            <h2>Responsibilities</h2>
           </div>
           <div className="responsibility-grid">
             {responsibilities.map((item, index) => {
