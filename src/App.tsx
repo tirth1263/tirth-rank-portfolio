@@ -98,10 +98,6 @@ function App() {
                 <Code2 size={18} />
                 GitHub
               </a>
-              <a href={profile.linkedInPdf} target="_blank" rel="noreferrer">
-                <Download size={18} />
-                Profile PDF
-              </a>
               <span>
                 <MapPin size={18} />
                 {profile.location}

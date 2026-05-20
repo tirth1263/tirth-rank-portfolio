@@ -15,7 +15,7 @@ https://tirth-rank-portfolio.web.app
 - Contact form stored in Firestore
 - Optional contact attachment upload path using Firebase Storage
 - Dynamic public GitHub repository pulse
-- Resume and LinkedIn profile PDFs hosted as public assets
+- Resume PDF hosted as a public asset
 
 ## Local Development
 
