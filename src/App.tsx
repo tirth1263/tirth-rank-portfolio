@@ -1,6 +1,9 @@
 import { motion, type Transition } from "framer-motion";
 import {
+  BadgeCheck,
   Bot,
+  CalendarCheck,
+  Camera,
   Code2,
   Download,
   ExternalLink,
@@ -25,6 +28,37 @@ import {
   skillGroups,
   work
 } from "./data/portfolio";
+
+const responsibilities = [
+  {
+    title: "Member of Organizing Committee",
+    context: "NMMUN Media",
+    description:
+      "Contributed to media execution by designing 10+ Instagram posts and stories, and capturing photos and videos across the event.",
+    icon: Camera
+  },
+  {
+    title: "Core Committee Member",
+    context: "Raw Vision Media",
+    description:
+      "Led a 20+ member college photography and videography team for events, coverage planning, and creative media coordination.",
+    icon: BadgeCheck
+  },
+  {
+    title: "Member of Organizing Committee",
+    context: "PROTSAHAN Cultural Fest",
+    description:
+      "Supported college fest organization for games and student activities including Squid Games, Foosball, and Paintball.",
+    icon: Sparkles
+  },
+  {
+    title: "Event Management Committee",
+    context: "Ganesh Chaturthi Celebration at NMIMS",
+    description:
+      "Coordinated academic and extracurricular event operations to support smooth execution and stronger student engagement.",
+    icon: CalendarCheck
+  }
+];
 
 const baseTransition: Transition = { duration: 0.55, ease: "easeOut" };
 
@@ -239,8 +273,37 @@ function App() {
           </div>
         </section>
 
+        <section className="section responsibilities-section" id="responsibilities">
+          <div className="section-heading">
+            <p className="eyebrow">Responsibilities</p>
+            <h2>Leadership, media, and event execution beyond the classroom.</h2>
+          </div>
+          <div className="responsibility-grid">
+            {responsibilities.map((item, index) => {
+              const Icon = item.icon;
+              return (
+                <motion.article
+                  className="responsibility-card"
+                  key={`${item.title}-${item.context}`}
+                  {...fadeUp}
+                  transition={{ ...baseTransition, delay: index * 0.04 }}
+                >
+                  <div className="responsibility-icon">
+                    <Icon size={22} />
+                  </div>
+                  <div>
+                    <span>{item.context}</span>
+                    <h3>{item.title}</h3>
+                    <p>{item.description}</p>
+                  </div>
+                </motion.article>
+              );
+            })}
+          </div>
+        </section>
+
         <GithubPulse />
-        <Contact user={user} />
+        <Contact />
       </main>
 
       <footer className="site-footer">

@@ -600,7 +600,8 @@ a {
 
 .section-heading h2,
 .intro-copy h2,
-.contact-copy h2 {
+.contact-copy h2,
+.contact-heading h2 {
   margin: 0;
   font-size: 2.65rem;
   line-height: 1.08;
@@ -681,6 +682,8 @@ a {
 .publication-card,
 .certification-panel,
 .repo-card,
+.responsibility-card,
+.contact-card,
 .contact-form {
   border: 1px solid var(--line);
   border-radius: var(--radius);
@@ -706,6 +709,7 @@ a {
 .education-card h3,
 .publication-card h3,
 .repo-card h3,
+.responsibility-card h3,
 .certification-panel h3 {
   margin: 0;
   color: var(--text);
@@ -718,7 +722,8 @@ a {
 .project-card p,
 .education-card p,
 .publication-card p,
-.repo-card p {
+.repo-card p,
+.responsibility-card p {
   color: var(--muted-strong);
 }
 
@@ -767,7 +772,9 @@ a {
 .project-card:hover,
 .skill-card:hover,
 .timeline-body:hover,
-.repo-card:hover {
+.repo-card:hover,
+.responsibility-card:hover,
+.contact-card:hover {
   transform: translateY(-4px);
   border-color: rgba(var(--teal-rgb), 0.5);
   box-shadow: 0 28px 90px rgba(var(--teal-rgb), 0.14);
@@ -899,6 +906,55 @@ a {
 
 .certification-panel li + li {
   margin-top: 0.55rem;
+}
+
+.responsibilities-section {
+  padding-top: 4.5rem;
+}
+
+.responsibility-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.responsibility-card {
+  display: grid;
+  grid-template-columns: 3rem 1fr;
+  gap: 1rem;
+  min-height: 12rem;
+  padding: 1.25rem;
+  transition:
+    transform 180ms ease,
+    border-color 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.responsibility-icon {
+  display: grid;
+  place-items: center;
+  width: 3rem;
+  height: 3rem;
+  border: 1px solid rgba(var(--teal-rgb), 0.45);
+  border-radius: 50%;
+  color: var(--teal);
+  background: rgba(var(--teal-rgb), 0.1);
+}
+
+.responsibility-card span {
+  display: inline-flex;
+  color: var(--amber);
+  font-size: 0.84rem;
+  font-weight: 900;
+}
+
+.responsibility-card h3 {
+  margin-top: 0.35rem;
+}
+
+.responsibility-card p {
+  margin: 0.65rem 0 0;
+  line-height: 1.7;
 }
 
 .github-section {
@@ -1072,6 +1128,53 @@ a {
 
 .contact-section {
   max-width: 1240px;
+}
+
+.contact-heading {
+  margin-bottom: 1.6rem;
+}
+
+.contact-heading h2 {
+  max-width: none;
+}
+
+.contact-card-grid {
+  display: grid;
+  grid-template-columns: 1.22fr 1fr 1.05fr 1.34fr 1.14fr;
+  gap: 1rem;
+}
+
+.contact-card {
+  min-height: 9rem;
+  padding: 1.15rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 0.75rem;
+  color: var(--text);
+  text-decoration: none;
+  transition:
+    transform 180ms ease,
+    border-color 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.contact-card-title {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  color: var(--teal);
+  font-size: 1.05rem;
+  font-weight: 900;
+}
+
+.contact-card-value {
+  color: var(--muted-strong);
+  font-family:
+    "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+  font-size: 0.98rem;
+  line-height: 1.45;
+  overflow-wrap: anywhere;
 }
 
 .contact-layout {
@@ -1473,6 +1576,11 @@ a {
     grid-template-columns: 1fr;
   }
 
+  .responsibility-grid,
+  .contact-card-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .contact-copy {
     position: static;
   }
@@ -1571,8 +1679,19 @@ a {
   .project-grid,
   .skill-grid,
   .repo-grid,
+  .responsibility-grid,
+  .contact-card-grid,
   .contact-form {
     grid-template-columns: 1fr;
+  }
+
+  .responsibility-card {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .contact-card {
+    min-height: 7.5rem;
   }
 
   .project-filters {

@@ -19,6 +19,7 @@ export const profile = {
   location: "Tempe, Arizona",
   email: "tirthrank.work@gmail.com",
   phone: "+1 (480) 743-4415",
+  website: "https://tirth-rank-portfolio.web.app",
   linkedIn: "https://www.linkedin.com/in/tirth-rank/",
   github: "https://github.com/tirth1263",
   resume: "/resume/Tirth-Rank-Resume.pdf",
