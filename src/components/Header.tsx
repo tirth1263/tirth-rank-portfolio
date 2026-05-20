@@ -6,10 +6,10 @@ import { AuthButton } from "./AuthButton";
 import { ThemeSwitcher } from "./ThemeSwitcher";
 
 const navItems = [
+  ["Education & Research", "#research"],
   ["Work Experience", "#work"],
   ["Projects", "#projects"],
   ["Tech", "#tech"],
-  ["Education & Research", "#research"],
   ["Responsibilities", "#responsibilities"],
   ["My Work", "#github"],
   ["Contact", "#contact"]

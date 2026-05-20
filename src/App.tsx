@@ -167,6 +167,52 @@ function App() {
           </motion.div>
         </section>
 
+        <section className="section research-section" id="research">
+          <div className="section-heading">
+            <h2>Education & Research</h2>
+          </div>
+          <div className="education-grid">
+            {education.map((item) => {
+              const Icon = item.icon;
+              return (
+                <motion.article className="education-card" key={item.school} {...fadeUp}>
+                  <Icon size={22} />
+                  <div>
+                    <h3>{item.school}</h3>
+                    <p>{item.program}</p>
+                    <span>{item.period}</span>
+                    <small>{item.meta}</small>
+                  </div>
+                </motion.article>
+              );
+            })}
+          </div>
+
+          <div className="research-grid">
+            <div className="publication-list">
+              {publications.map((publication, index) => (
+                <motion.article className="publication-card" key={publication.title} {...fadeUp} transition={{ ...baseTransition, delay: index * 0.04 }}>
+                  <span>{publication.year}</span>
+                  <h3>{publication.title}</h3>
+                  <p>{publication.venue}</p>
+                </motion.article>
+              ))}
+            </div>
+
+            <motion.div className="certification-panel" {...fadeUp}>
+              <div className="skill-heading">
+                <Bot size={20} />
+                <h3>Certifications</h3>
+              </div>
+              <ul>
+                {certifications.map((certification) => (
+                  <li key={certification}>{certification}</li>
+                ))}
+              </ul>
+            </motion.div>
+          </div>
+        </section>
+
         <section className="section work-section" id="work">
           <div className="section-heading">
             <h2>Work Experience</h2>
@@ -248,52 +294,6 @@ function App() {
                 </motion.article>
               );
             })}
-          </div>
-        </section>
-
-        <section className="section research-section" id="research">
-          <div className="section-heading">
-            <h2>Education & Research</h2>
-          </div>
-          <div className="education-grid">
-            {education.map((item) => {
-              const Icon = item.icon;
-              return (
-                <motion.article className="education-card" key={item.school} {...fadeUp}>
-                  <Icon size={22} />
-                  <div>
-                    <h3>{item.school}</h3>
-                    <p>{item.program}</p>
-                    <span>{item.period}</span>
-                    <small>{item.meta}</small>
-                  </div>
-                </motion.article>
-              );
-            })}
-          </div>
-
-          <div className="research-grid">
-            <div className="publication-list">
-              {publications.map((publication, index) => (
-                <motion.article className="publication-card" key={publication.title} {...fadeUp} transition={{ ...baseTransition, delay: index * 0.04 }}>
-                  <span>{publication.year}</span>
-                  <h3>{publication.title}</h3>
-                  <p>{publication.venue}</p>
-                </motion.article>
-              ))}
-            </div>
-
-            <motion.div className="certification-panel" {...fadeUp}>
-              <div className="skill-heading">
-                <Bot size={20} />
-                <h3>Certifications</h3>
-              </div>
-              <ul>
-                {certifications.map((certification) => (
-                  <li key={certification}>{certification}</li>
-                ))}
-              </ul>
-            </motion.div>
           </div>
         </section>
 
