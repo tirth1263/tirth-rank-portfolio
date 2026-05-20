@@ -907,14 +907,14 @@ a {
 
 .repo-grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
 }
 
 .repo-card {
   position: relative;
   overflow: hidden;
-  min-height: 13.5rem;
+  min-height: 24rem;
   padding: 1.1rem;
   display: flex;
   flex-direction: column;
@@ -937,6 +937,36 @@ a {
   align-items: center;
   color: var(--muted);
   font-size: 0.82rem;
+}
+
+.repo-tags {
+  margin-top: 0.4rem;
+}
+
+.repo-action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  min-height: 2.55rem;
+  margin-top: auto;
+  border: 1px solid rgba(var(--teal-rgb), 0.48);
+  border-radius: var(--radius);
+  color: var(--button-text);
+  background: linear-gradient(135deg, var(--teal), var(--amber));
+  font-size: 0.9rem;
+  font-weight: 900;
+  text-decoration: none;
+  box-shadow: 0 14px 34px rgba(var(--teal-rgb), 0.18);
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.repo-action:hover,
+.repo-action:focus-visible {
+  transform: translateY(-2px);
+  box-shadow: 0 20px 44px rgba(var(--teal-rgb), 0.24);
 }
 
 .repo-meta {
