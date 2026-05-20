@@ -38,7 +38,6 @@ export function Contact() {
   return (
     <section className="section contact-section" id="contact">
       <div className="contact-heading">
-        <p className="eyebrow">Contact</p>
         <h2>Contact</h2>
       </div>
       <div className="contact-card-grid">

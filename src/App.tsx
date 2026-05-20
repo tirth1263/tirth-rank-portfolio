@@ -60,6 +60,24 @@ const responsibilities = [
   }
 ];
 
+const profileHighlights = [
+  {
+    title: "Robotics and autonomy",
+    description: "Simulation, perception, mapping, and system-level thinking for physical intelligent systems.",
+    icon: Bot
+  },
+  {
+    title: "Machine learning systems",
+    description: "Computer vision, deep learning, active learning, and model evaluation workflows.",
+    icon: Sparkles
+  },
+  {
+    title: "Product-grade AI tools",
+    description: "Firebase-backed apps, GenAI workflows, analytics, and human-in-the-loop experiences.",
+    icon: ShieldCheck
+  }
+];
+
 const baseTransition: Transition = { duration: 0.55, ease: "easeOut" };
 
 const fadeUp = {
@@ -82,9 +100,6 @@ function App() {
             <img src="/assets/robot.jpg" alt="" />
           </div>
           <div className="hero-content">
-            <motion.p className="eyebrow" {...fadeUp}>
-              Robotics | AI | Computer Vision | GenAI
-            </motion.p>
             <motion.h1 {...fadeUp}>Tirth Rank</motion.h1>
             <motion.p className="hero-lede" {...fadeUp}>
               {profile.headline}
@@ -115,14 +130,11 @@ function App() {
           ))}
         </section>
 
-        <section className="section intro-section" id="about">
-          <motion.div className="intro-copy" {...fadeUp}>
-            <p className="eyebrow">Profile</p>
-            <h2>Engineering reliable intelligence for physical and digital systems.</h2>
-          </motion.div>
-          <motion.div className="intro-panel" {...fadeUp}>
+        <section className="section profile-section" id="about">
+          <motion.div className="profile-copy" {...fadeUp}>
+            <h2>Robotics and AI engineer building reliable intelligent systems.</h2>
             <p>{profile.summary}</p>
-            <div className="quick-links">
+            <div className="profile-actions">
               <a href={profile.linkedIn} target="_blank" rel="noreferrer">
                 <ExternalLink size={18} />
                 LinkedIn
@@ -137,11 +149,26 @@ function App() {
               </span>
             </div>
           </motion.div>
+          <motion.div className="profile-highlight-grid" {...fadeUp}>
+            {profileHighlights.map((item) => {
+              const Icon = item.icon;
+              return (
+                <article className="profile-highlight" key={item.title}>
+                  <div className="profile-highlight-icon">
+                    <Icon size={20} />
+                  </div>
+                  <div>
+                    <h3>{item.title}</h3>
+                    <p>{item.description}</p>
+                  </div>
+                </article>
+              );
+            })}
+          </motion.div>
         </section>
 
         <section className="section work-section" id="work">
           <div className="section-heading">
-            <p className="eyebrow">Recent Work</p>
             <h2>Experience across immersive systems, AI tooling, and applied analytics.</h2>
           </div>
           <div className="timeline">
@@ -175,7 +202,6 @@ function App() {
 
         <section className="section projects-section" id="projects">
           <div className="section-heading">
-            <p className="eyebrow">Selected Projects</p>
             <h2>Systems that combine data, model behavior, and product judgment.</h2>
           </div>
           <div className="project-grid">
@@ -203,7 +229,6 @@ function App() {
 
         <section className="section tech-section" id="tech">
           <div className="section-heading">
-            <p className="eyebrow">Technical Stack</p>
             <h2>Practical tools for research, prototyping, and production-minded experimentation.</h2>
           </div>
           <div className="skill-grid">
@@ -228,7 +253,6 @@ function App() {
 
         <section className="section research-section" id="research">
           <div className="section-heading">
-            <p className="eyebrow">Education and Research</p>
             <h2>Academic foundation with an applied AI research thread.</h2>
           </div>
           <div className="education-grid">
@@ -275,7 +299,6 @@ function App() {
 
         <section className="section responsibilities-section" id="responsibilities">
           <div className="section-heading">
-            <p className="eyebrow">Responsibilities</p>
             <h2>Leadership, media, and event execution beyond the classroom.</h2>
           </div>
           <div className="responsibility-grid">

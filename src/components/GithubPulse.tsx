@@ -152,7 +152,6 @@ export function GithubPulse() {
     <section className="section github-section" id="github">
       <div className="project-code-heading">
         <div>
-          <p className="eyebrow">Projects</p>
           <h2>Projects</h2>
           <p>
             Filter the work by technology area, then open the repository to review the implementation.
