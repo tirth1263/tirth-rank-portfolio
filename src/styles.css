@@ -905,6 +905,65 @@ a {
   padding-top: 4rem;
 }
 
+.project-code-heading {
+  display: grid;
+  grid-template-columns: minmax(18rem, 0.9fr) minmax(0, 1.1fr);
+  gap: 2rem;
+  align-items: start;
+  margin-bottom: 2rem;
+}
+
+.project-code-heading h2 {
+  margin: 0;
+  font-size: 2.65rem;
+  line-height: 1.08;
+  color: var(--text);
+}
+
+.project-code-heading p:not(.eyebrow) {
+  max-width: 36rem;
+  margin: 0.85rem 0 0;
+  color: var(--muted-strong);
+  line-height: 1.7;
+}
+
+.project-filters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 0.65rem;
+}
+
+.project-filters button {
+  min-height: 2.6rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--text);
+  background: var(--button-surface);
+  cursor: pointer;
+  padding: 0.55rem 0.9rem;
+  font-size: 0.9rem;
+  font-weight: 800;
+  transition:
+    transform 180ms ease,
+    border-color 180ms ease,
+    background 180ms ease,
+    color 180ms ease;
+}
+
+.project-filters button:hover,
+.project-filters button:focus-visible {
+  transform: translateY(-1px);
+  border-color: rgba(var(--teal-rgb), 0.45);
+}
+
+.project-filters button.active {
+  color: var(--button-text);
+  border-color: rgba(var(--teal-rgb), 0.65);
+  background: linear-gradient(135deg, var(--teal), var(--amber));
+  box-shadow: 0 10px 26px rgba(var(--teal-rgb), 0.2);
+}
+
 .repo-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -961,6 +1020,12 @@ a {
   transition:
     transform 180ms ease,
     box-shadow 180ms ease;
+}
+
+.github-mark {
+  width: 1.15rem;
+  height: 1.15rem;
+  flex: 0 0 auto;
 }
 
 .repo-action:hover,
@@ -1383,8 +1448,13 @@ a {
   .section-heading,
   .intro-section,
   .contact-layout,
-  .research-grid {
+  .research-grid,
+  .project-code-heading {
     grid-template-columns: 1fr;
+  }
+
+  .project-filters {
+    justify-content: flex-start;
   }
 
   .intro-panel {
@@ -1394,7 +1464,8 @@ a {
 
   .section-heading h2,
   .intro-copy h2,
-  .contact-copy h2 {
+  .contact-copy h2,
+  .project-code-heading h2 {
     font-size: 2.15rem;
   }
 
@@ -1502,6 +1573,16 @@ a {
   .repo-grid,
   .contact-form {
     grid-template-columns: 1fr;
+  }
+
+  .project-filters {
+    gap: 0.45rem;
+  }
+
+  .project-filters button {
+    min-height: 2.35rem;
+    padding: 0.45rem 0.7rem;
+    font-size: 0.82rem;
   }
 
   .project-card {
