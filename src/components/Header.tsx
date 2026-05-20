@@ -36,9 +36,6 @@ export function Header({ user, loading }: HeaderProps) {
             {label}
           </a>
         ))}
-        <a href={profile.resume} target="_blank" rel="noreferrer">
-          Resume
-        </a>
       </nav>
 
       <div className="header-actions">

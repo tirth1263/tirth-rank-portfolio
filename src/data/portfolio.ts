@@ -22,7 +22,7 @@ export const profile = {
   website: "https://tirth-rank-portfolio.web.app",
   linkedIn: "https://www.linkedin.com/in/tirth-rank/",
   github: "https://github.com/tirth1263",
-  resume: "/resume/Tirth-Rank-Resume.pdf",
+  resume: "/resume-viewer.html",
   headline:
     "M.S. Robotics and Autonomous Systems student at Arizona State University, building perception systems, GenAI workflows, and data-driven automation.",
   summary:

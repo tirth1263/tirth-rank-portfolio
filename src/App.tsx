@@ -5,8 +5,8 @@ import {
   CalendarCheck,
   Camera,
   Code2,
-  Download,
   ExternalLink,
+  FileText,
   Mail,
   MapPin,
   ShieldCheck,
@@ -110,8 +110,8 @@ function App() {
                 <span>Explore work</span>
               </a>
               <a className="secondary-button" href={profile.resume} target="_blank" rel="noreferrer">
-                <Download size={18} />
-                <span>Resume</span>
+                <FileText size={18} />
+                <span>View Resume</span>
               </a>
               <a className="secondary-button" href={`mailto:${profile.email}`}>
                 <Mail size={18} />
