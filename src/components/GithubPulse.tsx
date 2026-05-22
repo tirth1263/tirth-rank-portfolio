@@ -17,6 +17,7 @@ const categories = [
   "Robotics",
   "Deep Learning",
   "Computer Vision",
+  "Knowledge Graphs",
   "Audio ML",
   "Machine Learning",
   "Web Apps"
@@ -104,14 +105,14 @@ const projectRepos: ProjectRepo[] = [
     stack: ["Jupyter", "Scikit-Learn", "Pandas", "ML"]
   },
   {
-    name: "SAP Website",
-    repo: "tirth1263/SAP-Website",
-    url: "https://github.com/tirth1263/SAP-Website",
-    type: "Web Development",
-    categories: ["Web Apps"],
+    name: "VLM Reasoning Model using Knowledge Graph",
+    repo: "tirth1263/VLM-Reasoning-Model-using-Knowledge-Graph",
+    url: "https://github.com/tirth1263/VLM-Reasoning-Model-using-Knowledge-Graph",
+    type: "VLM + Knowledge Graphs",
+    categories: ["Computer Vision", "Machine Learning", "Knowledge Graphs"],
     description:
-      "A website project focused on presenting SAP-related content through a structured frontend experience with reusable sections and responsive page layout.",
-    stack: ["Frontend", "Responsive UI", "Web App", "JavaScript"]
+      "A physical-world reasoning system that augments PaliGemma-3B with ConceptNet facts and physics rules, then compares baseline and KG-assisted answers on ScienceQA physics questions.",
+    stack: ["PaliGemma", "ConceptNet", "ScienceQA", "Physics Rules"]
   },
   {
     name: "Service Provider Platform",
