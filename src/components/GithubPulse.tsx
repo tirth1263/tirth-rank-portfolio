@@ -13,17 +13,120 @@ type ProjectRepo = {
 
 const categories = [
   "All",
+  "AI Agents",
   "AI Apps",
   "Robotics",
-  "Deep Learning",
   "Computer Vision",
   "Knowledge Graphs",
+  "MLOps",
+  "Data Systems",
+  "Deep Learning",
   "Audio ML",
   "Machine Learning",
   "Web Apps"
 ];
 
 const projectRepos: ProjectRepo[] = [
+  {
+    name: "VLM Reasoning Model using Knowledge Graph",
+    repo: "tirth1263/VLM-Reasoning-Model-using-Knowledge-Graph",
+    url: "https://github.com/tirth1263/VLM-Reasoning-Model-using-Knowledge-Graph",
+    type: "VLM + Knowledge Graphs",
+    categories: ["Computer Vision", "Machine Learning", "Knowledge Graphs"],
+    description:
+      "A physical-world reasoning system that augments PaliGemma-3B with ConceptNet facts and physics rules, then compares baseline and KG-assisted answers on ScienceQA physics questions.",
+    stack: ["PaliGemma", "ConceptNet", "ScienceQA", "Physics Rules"]
+  },
+  {
+    name: "Smart Scheduler Assistant",
+    repo: "tirth1263/smart-scheduler-assistant",
+    url: "https://github.com/tirth1263/smart-scheduler-assistant",
+    type: "AI Productivity Agent",
+    categories: ["AI Agents", "AI Apps"],
+    description:
+      "An Agno multi-agent assistant that reads Gmail, filters important scheduling emails, and manages Google Calendar with persistent memory and secure local authentication.",
+    stack: ["Python", "Agno", "Gmail API", "Google Calendar"]
+  },
+  {
+    name: "Web Automation Agent",
+    repo: "tirth1263/web-automation-agent",
+    url: "https://github.com/tirth1263/web-automation-agent",
+    type: "Browser Automation Agent",
+    categories: ["AI Agents", "AI Apps"],
+    description:
+      "A natural-language browser automation agent built with Browser Use and Nebius Token Factory for ecommerce research, product extraction, and adaptive web workflows.",
+    stack: ["Python", "Browser Use", "Nebius", "LangChain"]
+  },
+  {
+    name: "Multi-Agent Orchestration System",
+    repo: "tirth1263/multi-agent-orchestration-system",
+    url: "https://github.com/tirth1263/multi-agent-orchestration-system",
+    type: "Agentic AI Infrastructure",
+    categories: ["AI Agents", "Data Systems"],
+    description:
+      "A hierarchical orchestration framework where tools, API calls, MCP servers, and sub-agents share a unified handoff protocol with cycle detection and depth control.",
+    stack: ["Python", "MCP", "Tool Routing", "Agent Handoffs"]
+  },
+  {
+    name: "Enterprise MCP Database Server",
+    repo: "tirth1263/enterprise-mcp-database-server",
+    url: "https://github.com/tirth1263/enterprise-mcp-database-server",
+    type: "MCP Database Tooling",
+    categories: ["Data Systems", "AI Apps", "Web Apps"],
+    description:
+      "A Firebase-backed MCP app for storing connector fingerprints, importing schema snapshots, generating privacy-aware SQL, explaining aggregate anomalies, and exporting Codex MCP config.",
+    stack: ["TypeScript", "MCP SDK", "Firebase", "SQL"]
+  },
+  {
+    name: "Autonomous CI/CD Failure Patcher",
+    repo: "tirth1263/autonomous-ci-cd-failure-patcher",
+    url: "https://github.com/tirth1263/autonomous-ci-cd-failure-patcher",
+    type: "AI DevOps Automation",
+    categories: ["AI Agents", "Data Systems", "Web Apps"],
+    description:
+      "A Firebase dashboard and GitHub Action that collects failed workflow logs, asks Codex for a patch, verifies the fix, and opens a pull request.",
+    stack: ["TypeScript", "Firebase", "GitHub Actions", "Codex"]
+  },
+  {
+    name: "Real-Time MLOps Drift Monitoring System",
+    repo: "tirth1263/real-time-ml-ops-drifting-and-monitoring-system",
+    url: "https://github.com/tirth1263/real-time-ml-ops-drifting-and-monitoring-system",
+    type: "MLOps Monitoring",
+    categories: ["MLOps", "Machine Learning", "Web Apps"],
+    description:
+      "A Firebase-first MLOps control center that serves a predictive model, simulates production drift, tracks quality metrics, raises alerts, and stores versioned model artifacts.",
+    stack: ["React", "Firebase", "PSI Drift", "Model Monitoring"]
+  },
+  {
+    name: "Satellite and Drone Feed Change Tracker",
+    repo: "tirth1263/satellite-imagery-or-drone-feed-chage-tracker",
+    url: "https://github.com/tirth1263/satellite-imagery-or-drone-feed-chage-tracker",
+    type: "Geospatial Computer Vision",
+    categories: ["Computer Vision", "MLOps", "Web Apps"],
+    description:
+      "A geospatial intelligence dashboard and Python CV pipeline for detecting land, water, urban, deforestation, reservoir, and burn-scar changes across satellite or drone imagery.",
+    stack: ["React", "Rasterio", "OpenCV", "GeoJSON"]
+  },
+  {
+    name: "Multi-Modal E-Commerce Fake Review Detector",
+    repo: "tirth1263/multi-modal-e-commerce-fake-review-detector",
+    url: "https://github.com/tirth1263/multi-modal-e-commerce-fake-review-detector",
+    type: "Multimodal Fraud Detection",
+    categories: ["Machine Learning", "Computer Vision", "AI Apps"],
+    description:
+      "A fake-review detection system that fuses review text, reviewer metadata, and product image signals through a FastAPI backend, explainability UI, and PyTorch fusion scaffold.",
+    stack: ["FastAPI", "PyTorch", "Transformers", "Docker"]
+  },
+  {
+    name: "AI-Assisted Robotic Design Interface",
+    repo: "tirth1263/ai-assisted-robotic-design-interface-for-creative-fabrication",
+    url: "https://github.com/tirth1263/ai-assisted-robotic-design-interface-for-creative-fabrication",
+    type: "Robotic Fabrication UI",
+    categories: ["Robotics", "AI Apps", "Web Apps"],
+    description:
+      "A research-interface prototype that converts creative design intent into robotic fabrication parameters with readiness scoring, review checkpoints, and workflow documentation.",
+    stack: ["React", "TypeScript", "Robotics", "Fabrication"]
+  },
   {
     name: "ApplyForge AI",
     repo: "tirth1263/ApplyForge-AI",
@@ -35,6 +138,16 @@ const projectRepos: ProjectRepo[] = [
     stack: ["React", "TypeScript", "Firebase", "Cloud Functions"]
   },
   {
+    name: "AI Styling Assistant",
+    repo: "tirth1263/ai-styling-assistant-prototype-for-customer-facing-shopping-apps",
+    url: "https://github.com/tirth1263/ai-styling-assistant-prototype-for-customer-facing-shopping-apps",
+    type: "Retail AI Prototype",
+    categories: ["AI Apps", "Web Apps"],
+    description:
+      "A Firebase-backed retail styling assistant with Google sign-in, product catalog sync, wardrobe image uploads, outfit recommendations, saved looks, and shopper cart flows.",
+    stack: ["React", "TypeScript", "Firebase", "Retrieval"]
+  },
+  {
     name: "MyIdea",
     repo: "tirth1263/MyIdea",
     url: "https://github.com/tirth1263/MyIdea",
@@ -43,6 +156,16 @@ const projectRepos: ProjectRepo[] = [
     description:
       "A Firebase-backed second brain for video ideas with Google sign-in, visual masonry cards, source/category filters, image uploads, detail drawers, and workspace join codes.",
     stack: ["JavaScript", "Firebase", "Storage", "Cloud Functions"]
+  },
+  {
+    name: "B2B Competitor Intelligence Engine",
+    repo: "tirth1263/b2b-competitor-intelligence-engine",
+    url: "https://github.com/tirth1263/b2b-competitor-intelligence-engine",
+    type: "Market Intelligence NLP",
+    categories: ["Machine Learning", "Data Systems", "AI Apps"],
+    description:
+      "A cold-start intelligence pipeline that crawls public market text, extracts entities with Hugging Face NER, stores structured signals, and visualizes competitor trends in Streamlit.",
+    stack: ["Python", "Scrapy", "Transformers", "Streamlit"]
   },
   {
     name: "RAS 545 Robotics Systems 1",
@@ -75,6 +198,16 @@ const projectRepos: ProjectRepo[] = [
     stack: ["Jupyter", "Computer Vision", "Classification", "Kaggle"]
   },
   {
+    name: "Real vs Fake Face Classification",
+    repo: "tirth1263/140k-real-vs-fake-97.395-accuracy",
+    url: "https://github.com/tirth1263/140k-real-vs-fake-97.395-accuracy",
+    type: "Deepfake Image Classification",
+    categories: ["Computer Vision", "Deep Learning", "Machine Learning"],
+    description:
+      "A DenseNet121-based image classification workflow for the 140k real-vs-fake faces dataset, including preprocessing, saved model artifacts, prediction notebooks, and 97.4% test accuracy.",
+    stack: ["Jupyter", "DenseNet121", "CNN", "Kaggle"]
+  },
+  {
     name: "GTZAN Genre Classification",
     repo: "tirth1263/GTZAN-dataset-genre-classification",
     url: "https://github.com/tirth1263/GTZAN-dataset-genre-classification",
@@ -95,6 +228,16 @@ const projectRepos: ProjectRepo[] = [
     stack: ["Python", "CNN", "Computer Vision", "Deep Learning"]
   },
   {
+    name: "Codec Technologies ML Projects",
+    repo: "tirth1263/CodecTechnologiesProjects",
+    url: "https://github.com/tirth1263/CodecTechnologiesProjects",
+    type: "Applied ML and NLP",
+    categories: ["Machine Learning", "Data Systems"],
+    description:
+      "A Python project set covering stock price prediction with historical market data and Twitter sentiment analysis using NLP preprocessing and classic ML baselines.",
+    stack: ["Python", "Scikit-Learn", "NLP", "yfinance"]
+  },
+  {
     name: "Basic ML Projects",
     repo: "tirth1263/Basic-ML-Projects",
     url: "https://github.com/tirth1263/Basic-ML-Projects",
@@ -103,16 +246,6 @@ const projectRepos: ProjectRepo[] = [
     description:
       "A collection of machine learning notebooks for core supervised learning workflows, data analysis, model training, evaluation, and baseline experimentation.",
     stack: ["Jupyter", "Scikit-Learn", "Pandas", "ML"]
-  },
-  {
-    name: "VLM Reasoning Model using Knowledge Graph",
-    repo: "tirth1263/VLM-Reasoning-Model-using-Knowledge-Graph",
-    url: "https://github.com/tirth1263/VLM-Reasoning-Model-using-Knowledge-Graph",
-    type: "VLM + Knowledge Graphs",
-    categories: ["Computer Vision", "Machine Learning", "Knowledge Graphs"],
-    description:
-      "A physical-world reasoning system that augments PaliGemma-3B with ConceptNet facts and physics rules, then compares baseline and KG-assisted answers on ScienceQA physics questions.",
-    stack: ["PaliGemma", "ConceptNet", "ScienceQA", "Physics Rules"]
   },
   {
     name: "Service Provider Platform",
