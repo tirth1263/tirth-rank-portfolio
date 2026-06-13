@@ -11,7 +11,6 @@ const navItems = [
   ["Projects", "#projects"],
   ["Tech", "#tech"],
   ["Responsibilities", "#responsibilities"],
-  ["My Work", "#github"],
   ["Contact", "#contact"]
 ];
 

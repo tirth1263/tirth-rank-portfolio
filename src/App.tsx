@@ -14,7 +14,6 @@ import {
 } from "lucide-react";
 import { ChatBot } from "./components/ChatBot";
 import { Contact } from "./components/Contact";
-import { GithubPulse } from "./components/GithubPulse";
 import { Header } from "./components/Header";
 import { NeuralCanvas } from "./components/NeuralCanvas";
 import { useAuth } from "./hooks/useAuth";
@@ -76,6 +75,12 @@ const profileHighlights = [
     description: "Firebase-backed apps, GenAI workflows, analytics, and human-in-the-loop experiences.",
     icon: ShieldCheck
   }
+];
+
+const projectDomains = [
+  "Robotics, Autonomous Systems & Deep Learning",
+  "Machine Learning, NLP & Data Analytics",
+  "Software Engineering, IoT & Intelligent Systems"
 ];
 
 const baseTransition: Transition = { duration: 0.55, ease: "easeOut" };
@@ -250,26 +255,50 @@ function App() {
           <div className="section-heading">
             <h2>Projects</h2>
           </div>
-          <div className="project-grid">
-            {projects.map((project, index) => (
-              <motion.article className="project-card" key={project.title} {...fadeUp} transition={{ ...baseTransition, delay: index * 0.04 }}>
-                <div className="project-index">{String(index + 1).padStart(2, "0")}</div>
-                <div>
-                  <div className="project-year">{project.year}</div>
-                  <h3>{project.title}</h3>
-                  <p>{project.summary}</p>
+          <div className="project-domain-stack">
+            {projectDomains.map((domain) => {
+              const domainProjects = projects.filter((project) => project.domain === domain);
+              return (
+                <div className="project-domain" key={domain}>
+                  <div className="project-domain-heading">
+                    <h3>{domain}</h3>
+                  </div>
+                  <div className="project-grid">
+                    {domainProjects.map((project, index) => {
+                      const globalIndex = projects.findIndex((item) => item.title === project.title) + 1;
+                      return (
+                        <motion.article
+                          className="project-card"
+                          key={project.title}
+                          {...fadeUp}
+                          transition={{ ...baseTransition, delay: index * 0.04 }}
+                        >
+                          <div className="project-index">{String(globalIndex).padStart(2, "0")}</div>
+                          <div>
+                            <div className="project-year">{project.year}</div>
+                            <h4>{project.title}</h4>
+                            <p>{project.summary}</p>
+                          </div>
+                          <div className="tag-row">
+                            {project.tags.map((tag) => (
+                              <span key={tag}>{tag}</span>
+                            ))}
+                          </div>
+                          <div className="project-impact">
+                            <ShieldCheck size={16} />
+                            {project.impact}
+                          </div>
+                          <a className="project-code-link" href={project.codeUrl} target="_blank" rel="noreferrer">
+                            <Code2 size={18} />
+                            View Code
+                          </a>
+                        </motion.article>
+                      );
+                    })}
+                  </div>
                 </div>
-                <div className="tag-row">
-                  {project.tags.map((tag) => (
-                    <span key={tag}>{tag}</span>
-                  ))}
-                </div>
-                <div className="project-signal">
-                  <ShieldCheck size={16} />
-                  {project.signal}
-                </div>
-              </motion.article>
-            ))}
+              );
+            })}
           </div>
         </section>
 
@@ -325,7 +354,6 @@ function App() {
           </div>
         </section>
 
-        <GithubPulse />
         <Contact />
       </main>
 

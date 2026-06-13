@@ -99,52 +99,94 @@ export const work = [
 
 export const projects = [
   {
-    title: "Guest Satisfaction Active Learning and Label Quality Pipeline",
+    title: "VLM Reasoning Model using Knowledge Graph",
     year: "2026",
-    tags: ["PyTorch", "Active Learning", "Dashboards", "Human-in-the-loop"],
+    domain: "Robotics, Autonomous Systems & Deep Learning",
+    tags: ["PaliGemma", "ConceptNet", "ScienceQA", "Physics Rules"],
     summary:
-      "Designed an active learning workflow with uncertainty sampling, label diagnostics, review loops, and model evaluation dashboards for guest experience prediction.",
-    signal: "Label efficiency and empirical product research"
+      "Built a physical-world reasoning system that augments a vision-language model with ConceptNet facts and physics rules for science question answering.",
+    impact: "Knowledge-grounded VLM reasoning with ablation-backed evaluation",
+    codeUrl: "https://github.com/tirth1263/VLM-Reasoning-Model-using-Knowledge-Graph"
   },
   {
-    title: "LLM Labeling Agent for Trip Experience Intelligence",
+    title: "AI-Assisted Robotic Design Interface",
+    year: "2026",
+    domain: "Robotics, Autonomous Systems & Deep Learning",
+    tags: ["Robotics", "React", "TypeScript", "Fabrication"],
+    summary:
+      "Created a research-interface prototype that maps creative design intent into robotic fabrication parameters with readiness scoring and review checkpoints.",
+    impact: "Human-in-the-loop workflow design for creative robotic fabrication",
+    codeUrl: "https://github.com/tirth1263/ai-assisted-robotic-design-interface-for-creative-fabrication"
+  },
+  {
+    title: "RAS 545 Robotics Systems 1",
     year: "2025",
-    tags: ["LLMs", "Structured Outputs", "Prompt Engineering", "Evaluation"],
+    domain: "Robotics, Autonomous Systems & Deep Learning",
+    tags: ["Jupyter", "Kinematics", "Simulation", "Robotics"],
     summary:
-      "Built a GenAI-assisted labeling framework using prompts, structured outputs, rubrics, consistency checks, and prompt iteration for multimodal trip feedback.",
-    signal: "Scalable annotation quality"
+      "Completed robotics systems work covering robot modeling, kinematics, simulation notebooks, lab assignments, and system-level problem solving.",
+    impact: "Graduate robotics foundation across modeling and autonomous systems",
+    codeUrl: "https://github.com/tirth1263/RAS-545-Robotics-Systems-1"
   },
   {
-    title: "Multimodal Travel Feedback Analytics and GSAT Prediction System",
-    year: "2024",
-    tags: ["TensorFlow", "SQL", "Pandas", "Sentiment"],
+    title: "Multi-Modal E-Commerce Fake Review Detector",
+    year: "2026",
+    domain: "Machine Learning, NLP & Data Analytics",
+    tags: ["FastAPI", "PyTorch", "Transformers", "Docker"],
     summary:
-      "Created a predictive analytics pipeline that combined structured trip metadata and text feedback to identify satisfaction drivers.",
-    signal: "Model comparison and statistical validation"
+      "Developed a fraud detection system that fuses review text, reviewer metadata, and product image signals with explainability and model-serving scaffolds.",
+    impact: "Multimodal ML architecture for trust and marketplace safety",
+    codeUrl: "https://github.com/tirth1263/multi-modal-e-commerce-fake-review-detector"
   },
   {
-    title: "Literature-Driven GenAI Evaluation Framework",
-    year: "2024",
-    tags: ["Research", "Weak Supervision", "Metrics", "Notebooks"],
+    title: "Real-Time MLOps Drift Monitoring System",
+    year: "2026",
+    domain: "Machine Learning, NLP & Data Analytics",
+    tags: ["MLOps", "Firebase", "PSI Drift", "Monitoring"],
     summary:
-      "Translated active learning, LLM labeling, and weak supervision research into reproducible notebooks, evaluation metrics, and experiment plans.",
-    signal: "Implementation-ready research"
+      "Built a Firebase-first MLOps dashboard that serves a predictive model, simulates production drift, tracks quality metrics, and stores versioned artifacts.",
+    impact: "Production-minded ML monitoring with drift alerts and retraining history",
+    codeUrl: "https://github.com/tirth1263/real-time-ml-ops-drifting-and-monitoring-system"
   },
   {
-    title: "Visual Question Answering and Computer Vision Systems",
-    year: "2024",
-    tags: ["VQA", "OpenCV", "Deep Learning", "NLP"],
+    title: "B2B Competitor Intelligence Engine",
+    year: "2026",
+    domain: "Machine Learning, NLP & Data Analytics",
+    tags: ["Scrapy", "NLP", "Transformers", "Streamlit"],
     summary:
-      "Developed a collection of AI systems including visual question answering, real-time fruit detection, leaf disease detection, spam detection, and AI noise cancellation.",
-    signal: "Applied AI across vision and language"
+      "Designed a cold-start intelligence pipeline that crawls market text, extracts entities with Hugging Face NER, and visualizes competitor signals.",
+    impact: "NLP-powered market analytics from unstructured public data",
+    codeUrl: "https://github.com/tirth1263/b2b-competitor-intelligence-engine"
   },
   {
-    title: "IoT Gesture-Controlled Bluetooth Speaker",
-    year: "2023",
-    tags: ["IoT", "Sensors", "Embedded", "Automation"],
+    title: "ApplyForge AI",
+    year: "2026",
+    domain: "Software Engineering, IoT & Intelligent Systems",
+    tags: ["React", "TypeScript", "Firebase", "Cloud Functions"],
     summary:
-      "Built an IoT prototype that used gesture inputs to control audio playback, connecting embedded sensing with accessible interaction design.",
-    signal: "Human-machine interaction prototype"
+      "Built a job application workspace for searching roles, tailoring resumes, generating cover letters, saving jobs, and tracking application history.",
+    impact: "Full-stack AI product workflow with persistent Firebase data",
+    codeUrl: "https://github.com/tirth1263/ApplyForge-AI"
+  },
+  {
+    title: "Smart Scheduler Assistant",
+    year: "2026",
+    domain: "Software Engineering, IoT & Intelligent Systems",
+    tags: ["Python", "Agno", "Gmail API", "Google Calendar"],
+    summary:
+      "Created a multi-agent assistant that reads Gmail, filters important scheduling messages, and manages Google Calendar with persistent memory.",
+    impact: "Agentic productivity system connecting real user tools and APIs",
+    codeUrl: "https://github.com/tirth1263/smart-scheduler-assistant"
+  },
+  {
+    title: "Autonomous CI/CD Failure Patcher",
+    year: "2026",
+    domain: "Software Engineering, IoT & Intelligent Systems",
+    tags: ["TypeScript", "Firebase", "GitHub Actions", "Codex"],
+    summary:
+      "Built a dashboard and GitHub Action that collects failed workflow logs, generates AI-assisted patches, verifies fixes, and opens pull requests.",
+    impact: "Self-healing DevOps automation for failed builds and test runs",
+    codeUrl: "https://github.com/tirth1263/autonomous-ci-cd-failure-patcher"
   }
 ];
 
@@ -294,6 +336,6 @@ Current role: Volumetric Innovation Fellow at ASU MESH Labs, supporting immersiv
 Previous role: XR Quality Assurance and Testing at ASU MESH Labs, performing functional and performance testing on XR applications, documenting defects, validating workflows, and improving immersive system reliability.
 Previous internships: Artificial Intelligence Intern at Codec Technologies India, Machine Learning Intern at Bacancy Technology, and Deloitte Data Analytics Virtual Internship via Forage.
 Technical skills include Python, SQL, Pandas, NumPy, SciPy, Scikit-Learn, PyTorch, TensorFlow, OpenCV, LLMs, prompt engineering, embeddings, RAG, active learning, Tableau, Excel, MATLAB, AutoCAD, SolidWorks, Linux workflows, and technical documentation.
-Projects include Guest Satisfaction Active Learning and Label Quality Pipeline, LLM Labeling Agent for Trip Experience Intelligence, Multimodal Travel Feedback Analytics and GSAT Prediction System, Literature-Driven GenAI Evaluation Framework, VLM Reasoning Model using Knowledge Graph with PaliGemma, ConceptNet, ScienceQA, and physics rules, Smart Scheduler Assistant, Web Automation Agent, Multi-Agent Orchestration System, Enterprise MCP Database Server, Autonomous CI/CD Failure Patcher, Real-Time MLOps Drift Monitoring System, Satellite and Drone Feed Change Tracker, Multi-Modal E-Commerce Fake Review Detector, AI-Assisted Robotic Design Interface, AI Styling Assistant, B2B Competitor Intelligence Engine, X-ray Bone Fracture Detection, Real vs Fake Face Classification, GTZAN Genre Classification, Image Classification Using CNN, Codec Technologies ML Projects, Basic ML Projects, RAS 545 Robotics Systems 1, and EEE 598 Deep Learning.
+Featured projects include VLM Reasoning Model using Knowledge Graph, AI-Assisted Robotic Design Interface, RAS 545 Robotics Systems 1, Multi-Modal E-Commerce Fake Review Detector, Real-Time MLOps Drift Monitoring System, B2B Competitor Intelligence Engine, ApplyForge AI, Smart Scheduler Assistant, and Autonomous CI/CD Failure Patcher. These projects span robotics and autonomous systems, deep learning, machine learning, NLP, data analytics, software engineering, and intelligent systems.
 Contact: tirthrank.work@gmail.com, LinkedIn at linkedin.com/in/tirth-rank, GitHub at github.com/tirth1263.
 `;
