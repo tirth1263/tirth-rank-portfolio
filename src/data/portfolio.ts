@@ -26,17 +26,29 @@ export const profile = {
   headline:
     "M.S. Robotics and Autonomous Systems student at Arizona State University, building perception systems, GenAI workflows, and data-driven automation.",
   summary:
-    "I work across robotics, machine learning, computer vision, immersive technology, and product analytics. My current focus is turning messy real-world signals into reliable systems: XR test workflows, volumetric tooling, model evaluation, active learning, and human-in-the-loop AI."
+    "I work across robotics, machine learning, computer vision, immersive technology, and product analytics. My current focus is turning messy real-world signals into reliable systems: robotic design prototyping, XR test workflows, volumetric tooling, model evaluation, active learning, and human-in-the-loop AI."
 };
 
 export const metrics = [
   { value: "3.73", label: "ASU graduate GPA" },
   { value: "10+", label: "AI and ML systems" },
-  { value: "5", label: "industry and research roles" },
+  { value: "6", label: "industry and research roles" },
   { value: "3", label: "research publications listed" }
 ];
 
 export const work = [
+  {
+    title: "Robotics Design Lab Researcher",
+    company: "The Design School at ASU",
+    location: "Tempe, AZ",
+    period: "Jun 2026 - Present",
+    icon: TestTube2,
+    bullets: [
+      "Supporting hands-on robotics, design, prototyping, and innovation work within ASU's Design School research lab.",
+      "Contributing to creative learning and research through lab-based experimentation, prototyping workflows, and robotics-focused support.",
+      "Bridging design thinking with robotics engineering to help develop practical, research-oriented intelligent systems."
+    ]
+  },
   {
     title: "Volumetric Innovation Fellow",
     company: "ASU MESH Labs",
@@ -332,6 +344,7 @@ Tirth Rank is a Robotics and AI engineer based in Tempe, Arizona.
 He is pursuing an M.S. in Robotics and Autonomous Systems with an Artificial Intelligence concentration at Arizona State University, with a 3.73 GPA.
 He earned a B.Tech in Artificial Intelligence and Machine Learning from SVKM's NMIMS, MPSTME, with a 3.75 GPA.
 His work spans data science, machine learning, computer vision, GenAI workflows, active learning, human-in-the-loop AI, immersive technology, XR testing, and robotics systems.
+Current role: Robotics Design Lab Researcher at The Design School at ASU, supporting hands-on robotics, design, prototyping, innovation, creative learning, and research in the design lab.
 Current role: Volumetric Innovation Fellow at ASU MESH Labs, supporting immersive and volumetric technology projects, data capture workflows, prototype development, calibration, testing, Python/OpenCV/Linux validation, and automation scripts.
 Previous role: XR Quality Assurance and Testing at ASU MESH Labs, performing functional and performance testing on XR applications, documenting defects, validating workflows, and improving immersive system reliability.
 Previous internships: Artificial Intelligence Intern at Codec Technologies India, Machine Learning Intern at Bacancy Technology, and Deloitte Data Analytics Virtual Internship via Forage.
