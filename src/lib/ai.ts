@@ -52,7 +52,7 @@ export function localPortfolioAnswer(question: string) {
   }
 
   if (/project|portfolio|built|genai|llm|vision|robot/.test(lower)) {
-    return "His portfolio includes an active learning and label quality pipeline, an LLM labeling agent for trip intelligence, multimodal GSAT prediction, a GenAI evaluation framework, visual question answering, real-time fruit detection, leaf disease detection, spam detection, AI noise cancellation, and an IoT gesture-controlled speaker.";
+    return "Tirth's featured projects span three domains: robotics and deep learning projects like the VLM Knowledge Graph reasoning model, AI-assisted robotic design interface, and RAS 545 robotics systems work; ML/NLP/data projects like multimodal fake review detection, MLOps drift monitoring, and B2B competitor intelligence; and intelligent software systems like ApplyForge AI, Smart Scheduler Assistant, and an autonomous CI/CD failure patcher.";
   }
 
   const tokens = tokenise(question);

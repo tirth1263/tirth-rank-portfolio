@@ -77,6 +77,29 @@ const profileHighlights = [
   }
 ];
 
+const autonomySignals = [
+  {
+    label: "Autonomous AI",
+    value: "Agent workflows",
+    icon: Bot
+  },
+  {
+    label: "Robotics",
+    value: "Physical systems",
+    icon: ShieldCheck
+  },
+  {
+    label: "MLOps",
+    value: "Live model loops",
+    icon: Sparkles
+  },
+  {
+    label: "Knowledge Systems",
+    value: "Reasoning graphs",
+    icon: Code2
+  }
+];
+
 const projectDomains = [
   "Robotics, Autonomous Systems & Deep Learning",
   "Machine Learning, NLP & Data Analytics",
@@ -101,9 +124,6 @@ function App() {
       <main>
         <section className="hero" id="home">
           <NeuralCanvas />
-          <div className="hero-media" aria-hidden="true">
-            <img src="/assets/robot.jpg" alt="" />
-          </div>
           <div className="hero-content">
             <motion.h1 {...fadeUp}>Tirth Rank</motion.h1>
             <motion.p className="hero-lede" {...fadeUp}>
@@ -124,6 +144,25 @@ function App() {
               </a>
             </motion.div>
           </div>
+          <motion.div className="hero-autonomy-panel" {...fadeUp} transition={{ ...baseTransition, delay: 0.12 }}>
+            <div className="autonomy-orbit" aria-hidden="true">
+              <span className="orbit-ring ring-one" />
+              <span className="orbit-ring ring-two" />
+              <span className="orbit-core" />
+            </div>
+            <div className="autonomy-grid">
+              {autonomySignals.map((signal) => {
+                const Icon = signal.icon;
+                return (
+                  <div className="autonomy-card" key={signal.label}>
+                    <Icon size={18} />
+                    <strong>{signal.label}</strong>
+                    <span>{signal.value}</span>
+                  </div>
+                );
+              })}
+            </div>
+          </motion.div>
         </section>
 
         <section className="signal-strip" aria-label="Portfolio metrics">
@@ -358,7 +397,7 @@ function App() {
       </main>
 
       <footer className="site-footer">
-        <span>© 2026 Tirth Rank</span>
+        <span>Copyright 2026 Tirth Rank</span>
         <span>Robotics and AI | Built with React, Firebase, and a little voltage.</span>
       </footer>
 

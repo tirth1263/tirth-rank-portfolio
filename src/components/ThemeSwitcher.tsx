@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 type ThemeName = "default" | "light" | "dark";
 
 const themes: Array<{ value: ThemeName; emoji: string; name: string }> = [
-  { value: "default", emoji: "🌈", name: "Default" },
+  { value: "default", emoji: "🌐", name: "Default" },
   { value: "light", emoji: "☀️", name: "Light" },
   { value: "dark", emoji: "🌙", name: "Dark" }
 ];
