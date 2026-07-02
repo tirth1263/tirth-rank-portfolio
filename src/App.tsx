@@ -103,7 +103,7 @@ const autonomySignals = [
 const projectDomains = [
   "Robotics, Autonomous Systems & Deep Learning",
   "Machine Learning, NLP & Data Analytics",
-  "Software Engineering, IoT & Intelligent Systems"
+  "MCP Agents, Voice AI & Intelligent Systems"
 ];
 
 const baseTransition: Transition = { duration: 0.55, ease: "easeOut" };
@@ -114,6 +114,17 @@ const fadeUp = {
   viewport: { once: true, amount: 0.2 },
   transition: baseTransition
 };
+
+function GitHubMark({ size = 18 }: { size?: number }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+      <path
+        fill="currentColor"
+        d="M12 .5A11.5 11.5 0 0 0 8.37 22.9c.58.11.79-.25.79-.56v-2c-3.22.7-3.9-1.39-3.9-1.39-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.71.08-.71 1.16.08 1.78 1.2 1.78 1.2 1.04 1.77 2.72 1.26 3.38.96.11-.75.41-1.26.74-1.55-2.57-.29-5.27-1.29-5.27-5.73 0-1.27.45-2.3 1.2-3.11-.12-.29-.52-1.47.11-3.06 0 0 .98-.31 3.18 1.19A11.1 11.1 0 0 1 12 6.05c.98 0 1.96.13 2.88.39 2.2-1.5 3.17-1.19 3.17-1.19.64 1.59.24 2.77.12 3.06.75.81 1.2 1.84 1.2 3.11 0 4.45-2.71 5.43-5.29 5.72.42.36.79 1.07.79 2.16v3.04c0 .31.21.68.8.56A11.5 11.5 0 0 0 12 .5Z"
+      />
+    </svg>
+  );
+}
 
 function App() {
   const { user, loading } = useAuth();
@@ -328,7 +339,7 @@ function App() {
                             {project.impact}
                           </div>
                           <a className="project-code-link" href={project.codeUrl} target="_blank" rel="noreferrer">
-                            <Code2 size={18} />
+                            <GitHubMark size={18} />
                             View Code
                           </a>
                         </motion.article>

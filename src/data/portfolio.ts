@@ -24,14 +24,14 @@ export const profile = {
   github: "https://github.com/tirth1263",
   resume: "/resume-viewer.html",
   headline:
-    "M.S. Robotics and Autonomous Systems student at Arizona State University, building perception systems, GenAI workflows, and data-driven automation.",
+    "M.S. Robotics and Autonomous Systems student at Arizona State University, building robotics systems, MCP agents, voice AI, and data-driven automation.",
   summary:
-    "I work across robotics, machine learning, computer vision, immersive technology, and product analytics. My current focus is turning messy real-world signals into reliable systems: robotic design prototyping, XR test workflows, volumetric tooling, model evaluation, active learning, and human-in-the-loop AI."
+    "I work across robotics, machine learning, computer vision, immersive technology, MCP agents, voice AI, and product analytics. My current focus is turning messy real-world signals into reliable systems: robotic design prototyping, agentic tool workflows, XR test workflows, model evaluation, active learning, and human-in-the-loop AI."
 };
 
 export const metrics = [
   { value: "3.73", label: "ASU graduate GPA" },
-  { value: "10+", label: "AI and ML systems" },
+  { value: "20+", label: "AI and agent systems" },
   { value: "6", label: "industry and research roles" },
   { value: "3", label: "research publications listed" }
 ];
@@ -131,14 +131,34 @@ export const projects = [
     codeUrl: "https://github.com/tirth1263/ai-assisted-robotic-design-interface-for-creative-fabrication"
   },
   {
-    title: "RAS 545 Robotics Systems 1",
-    year: "2025",
+    title: "Rhino 3D Projects",
+    year: "2026",
     domain: "Robotics, Autonomous Systems & Deep Learning",
-    tags: ["Jupyter", "Kinematics", "Simulation", "Robotics"],
+    tags: ["Rhino 8", "Grasshopper", "KUKA", "Fabrication"],
     summary:
-      "Completed robotics systems work covering robot modeling, kinematics, simulation notebooks, lab assignments, and system-level problem solving.",
-    impact: "Graduate robotics foundation across modeling and autonomous systems",
-    codeUrl: "https://github.com/tirth1263/RAS-545-Robotics-Systems-1"
+      "Built Rhino and Grasshopper drawing-tool projects for robot-assisted plotting workflows, including plugin-based KUKA robot workflow support.",
+    impact: "Design-to-robotics workflow experience for digital fabrication",
+    codeUrl: "https://github.com/tirth1263/Rhino-3D-Projects"
+  },
+  {
+    title: "Talk to Your DB",
+    year: "2026",
+    domain: "Machine Learning, NLP & Data Analytics",
+    tags: ["TypeScript", "MySQL", "Nebius", "NL2SQL"],
+    summary:
+      "Built an AI-powered MySQL query assistant that turns plain-English business questions into safe SQL, executes results, explains outputs, and supports CSV export.",
+    impact: "Natural-language analytics layer for business databases",
+    codeUrl: "https://github.com/tirth1263/talk-to-your-db"
+  },
+  {
+    title: "LangChain Data Agent PoC",
+    year: "2026",
+    domain: "Machine Learning, NLP & Data Analytics",
+    tags: ["LangChain", "LangGraph", "SQLite", "Nebius"],
+    summary:
+      "Created a compact natural-language-to-SQL data agent with schema scoping, query validation, follow-up handling, result summaries, and chart suggestions.",
+    impact: "Readable agent workflow for safe business data exploration",
+    codeUrl: "https://github.com/tirth1263/langchain-data-agent-poc"
   },
   {
     title: "Multi-Modal E-Commerce Fake Review Detector",
@@ -161,44 +181,94 @@ export const projects = [
     codeUrl: "https://github.com/tirth1263/real-time-ml-ops-drifting-and-monitoring-system"
   },
   {
-    title: "B2B Competitor Intelligence Engine",
+    title: "GitHub MCP Agent",
     year: "2026",
-    domain: "Machine Learning, NLP & Data Analytics",
-    tags: ["Scrapy", "NLP", "Transformers", "Streamlit"],
+    domain: "MCP Agents, Voice AI & Intelligent Systems",
+    tags: ["MCP", "Agno", "Nebius", "Streamlit"],
     summary:
-      "Designed a cold-start intelligence pipeline that crawls market text, extracts entities with Hugging Face NER, and visualizes competitor signals.",
-    impact: "NLP-powered market analytics from unstructured public data",
-    codeUrl: "https://github.com/tirth1263/b2b-competitor-intelligence-engine"
+      "Built a natural-language GitHub repository explorer powered by the official GitHub MCP server, Agno, and Nebius AI for querying issues, PRs, commits, and repo activity.",
+    impact: "MCP-native developer intelligence for live GitHub repositories",
+    codeUrl: "https://github.com/tirth1263/Github-MCP-Agent"
   },
   {
-    title: "ApplyForge AI",
+    title: "LangGraph MCP Agent",
     year: "2026",
-    domain: "Software Engineering, IoT & Intelligent Systems",
-    tags: ["React", "TypeScript", "Firebase", "Cloud Functions"],
+    domain: "MCP Agents, Voice AI & Intelligent Systems",
+    tags: ["MCP", "LangGraph", "LangChain", "Couchbase"],
     summary:
-      "Built a job application workspace for searching roles, tailoring resumes, generating cover letters, saving jobs, and tracking application history.",
-    impact: "Full-stack AI product workflow with persistent Firebase data",
-    codeUrl: "https://github.com/tirth1263/ApplyForge-AI"
+      "Implemented a LangChain and LangGraph ReAct agent that queries Couchbase through the Model Context Protocol without writing custom database tools.",
+    impact: "MCP database access pattern for agentic query workflows",
+    codeUrl: "https://github.com/tirth1263/LangGraph-MCP-Agent"
   },
   {
-    title: "Smart Scheduler Assistant",
+    title: "Doc-MCP Documentation RAG System",
     year: "2026",
-    domain: "Software Engineering, IoT & Intelligent Systems",
-    tags: ["Python", "Agno", "Gmail API", "Google Calendar"],
+    domain: "MCP Agents, Voice AI & Intelligent Systems",
+    tags: ["MCP", "RAG", "Gradio", "Docs"],
     summary:
-      "Created a multi-agent assistant that reads Gmail, filters important scheduling messages, and manages Google Calendar with persistent memory.",
-    impact: "Agentic productivity system connecting real user tools and APIs",
-    codeUrl: "https://github.com/tirth1263/smart-scheduler-assistant"
+      "Transformed GitHub documentation repositories into intelligent, queryable knowledge bases using retrieval-augmented generation and MCP-style context workflows.",
+    impact: "Documentation-to-agent knowledge base pipeline",
+    codeUrl: "https://github.com/tirth1263/doc-mcp"
   },
   {
-    title: "Autonomous CI/CD Failure Patcher",
+    title: "Enterprise MCP Database Server",
     year: "2026",
-    domain: "Software Engineering, IoT & Intelligent Systems",
-    tags: ["TypeScript", "Firebase", "GitHub Actions", "Codex"],
+    domain: "MCP Agents, Voice AI & Intelligent Systems",
+    tags: ["MCP SDK", "Firebase", "TypeScript", "SQL"],
     summary:
-      "Built a dashboard and GitHub Action that collects failed workflow logs, generates AI-assisted patches, verifies fixes, and opens pull requests.",
-    impact: "Self-healing DevOps automation for failed builds and test runs",
-    codeUrl: "https://github.com/tirth1263/autonomous-ci-cd-failure-patcher"
+      "Created a Firebase-backed web app and MCP SDK server for secure database metadata work, schema snapshots, privacy-aware SQL, execution plans, and Codex MCP config export.",
+    impact: "Secure MCP bridge for enterprise-style database workflows",
+    codeUrl: "https://github.com/tirth1263/enterprise-mcp-database-server"
+  },
+  {
+    title: "AI Agent Discovery Agent",
+    year: "2026",
+    domain: "MCP Agents, Voice AI & Intelligent Systems",
+    tags: ["MCP Registry", "Agno", "Nebius", "CLI"],
+    summary:
+      "Built a CLI and web showcase for discovering agents across NANDA, MCP, Virtuals, A2A, and ERC-8004 registries through a single prompt-driven workflow.",
+    impact: "Cross-registry agent discovery for the fragmented agent ecosystem",
+    codeUrl: "https://github.com/tirth1263/agent-discovery-agent"
+  },
+  {
+    title: "Multi-Agent Orchestration System",
+    year: "2026",
+    domain: "MCP Agents, Voice AI & Intelligent Systems",
+    tags: ["Multi-Agent", "MCP", "Composio", "Python"],
+    summary:
+      "Designed a hierarchical multi-agent system where functions, APIs, MCP servers, and sub-agents are treated as tools for recursive delegation and task decomposition.",
+    impact: "Unified tool abstraction for complex agent orchestration",
+    codeUrl: "https://github.com/tirth1263/multi-agent-orchestration-system"
+  },
+  {
+    title: "VoxCode Cursor Code Editor",
+    year: "2026",
+    domain: "MCP Agents, Voice AI & Intelligent Systems",
+    tags: ["Voice AI", "Deepgram", "Nebius", "Cursor SDK"],
+    summary:
+      "Built a local voice AI coding workspace for talking to a codebase, exploring architecture, and enabling explicit Cursor SDK file edits when permission is turned on.",
+    impact: "Voice-first developer tooling with guarded code-edit workflows",
+    codeUrl: "https://github.com/tirth1263/VoxCode-Cursor-Code-Editor"
+  },
+  {
+    title: "LiveKit Voice Agent with Web Search",
+    year: "2026",
+    domain: "MCP Agents, Voice AI & Intelligent Systems",
+    tags: ["LiveKit", "Gemini Live", "Web Search", "Voice AI"],
+    summary:
+      "Extended a realtime LiveKit and Gemini voice assistant with an Olostep web-search tool so spoken conversations can retrieve fresh, source-aware information.",
+    impact: "Low-latency voice agent with real-time retrieval",
+    codeUrl: "https://github.com/tirth1263/livekit-voice-agent-with-web-search"
+  },
+  {
+    title: "Healthcare Voice Contact Center",
+    year: "2026",
+    domain: "MCP Agents, Voice AI & Intelligent Systems",
+    tags: ["Pipecat", "Cartesia", "Nebius", "Voice Tools"],
+    summary:
+      "Built a production-minded clinic front-desk voice agent that handles appointments, FAQs, escalations, and supervisor handoff using real-time STT, LLM reasoning, and TTS.",
+    impact: "Domain-specific voice automation for healthcare operations",
+    codeUrl: "https://github.com/tirth1263/healthcare-voice-contact-center"
   }
 ];
 
@@ -223,11 +293,12 @@ export const skillGroups = [
     icon: Sparkles,
     skills: [
       "Prompt Engineering",
-      "LLM Labeling Agents",
-      "Structured Outputs",
-      "Embeddings",
+      "MCP Agents",
+      "LangChain",
+      "LangGraph",
       "RAG",
-      "Active Learning",
+      "Nebius Token Factory",
+      "Voice AI Agents",
       "Human-in-the-loop AI"
     ]
   },
@@ -277,6 +348,8 @@ export const skillGroups = [
       "Simulation Modeling",
       "Block Diagram Development",
       "System-Level Thinking",
+      "Rhino 3D",
+      "Grasshopper",
       "MATLAB",
       "AutoCAD",
       "SolidWorks",
@@ -334,7 +407,7 @@ export const certifications = [
 
 export const chatPrompts = [
   "What should recruiters know first?",
-  "Which projects show GenAI experience?",
+  "Which MCP agent projects stand out?",
   "Summarize Tirth's robotics background.",
   "How can I contact Tirth?"
 ];
@@ -343,12 +416,12 @@ export const portfolioContext = `
 Tirth Rank is a Robotics and AI engineer based in Tempe, Arizona.
 He is pursuing an M.S. in Robotics and Autonomous Systems with an Artificial Intelligence concentration at Arizona State University, with a 3.73 GPA.
 He earned a B.Tech in Artificial Intelligence and Machine Learning from SVKM's NMIMS, MPSTME, with a 3.75 GPA.
-His work spans data science, machine learning, computer vision, GenAI workflows, active learning, human-in-the-loop AI, immersive technology, XR testing, and robotics systems.
+His work spans data science, machine learning, computer vision, GenAI workflows, MCP agents, voice AI, active learning, human-in-the-loop AI, immersive technology, XR testing, and robotics systems.
 Current role: Robotics Design Lab Researcher at The Design School at ASU, supporting hands-on robotics, design, prototyping, innovation, creative learning, and research in the design lab.
 Current role: Volumetric Innovation Fellow at ASU MESH Labs, supporting immersive and volumetric technology projects, data capture workflows, prototype development, calibration, testing, Python/OpenCV/Linux validation, and automation scripts.
 Previous role: XR Quality Assurance and Testing at ASU MESH Labs, performing functional and performance testing on XR applications, documenting defects, validating workflows, and improving immersive system reliability.
 Previous internships: Artificial Intelligence Intern at Codec Technologies India, Machine Learning Intern at Bacancy Technology, and Deloitte Data Analytics Virtual Internship via Forage.
-Technical skills include Python, SQL, Pandas, NumPy, SciPy, Scikit-Learn, PyTorch, TensorFlow, OpenCV, LLMs, prompt engineering, embeddings, RAG, active learning, Tableau, Excel, MATLAB, AutoCAD, SolidWorks, Linux workflows, and technical documentation.
-Featured projects include VLM Reasoning Model using Knowledge Graph, AI-Assisted Robotic Design Interface, RAS 545 Robotics Systems 1, Multi-Modal E-Commerce Fake Review Detector, Real-Time MLOps Drift Monitoring System, B2B Competitor Intelligence Engine, ApplyForge AI, Smart Scheduler Assistant, and Autonomous CI/CD Failure Patcher. These projects span robotics and autonomous systems, deep learning, machine learning, NLP, data analytics, software engineering, and intelligent systems.
+Technical skills include Python, TypeScript, SQL, Pandas, NumPy, SciPy, Scikit-Learn, PyTorch, TensorFlow, OpenCV, LLMs, MCP, LangChain, LangGraph, prompt engineering, RAG, voice AI agents, Tableau, Excel, MATLAB, Rhino 3D, Grasshopper, AutoCAD, SolidWorks, Linux workflows, and technical documentation.
+Featured projects include VLM Reasoning Model using Knowledge Graph, AI-Assisted Robotic Design Interface, Rhino 3D Projects, Talk to Your DB, LangChain Data Agent PoC, Multi-Modal E-Commerce Fake Review Detector, Real-Time MLOps Drift Monitoring System, GitHub MCP Agent, LangGraph MCP Agent, Doc-MCP Documentation RAG System, Enterprise MCP Database Server, AI Agent Discovery Agent, Multi-Agent Orchestration System, VoxCode Cursor Code Editor, LiveKit Voice Agent with Web Search, and Healthcare Voice Contact Center. These projects span robotics and autonomous systems, deep learning, machine learning, NLP, data analytics, MCP agents, voice AI, software engineering, and intelligent systems.
 Contact: tirthrank.work@gmail.com, LinkedIn at linkedin.com/in/tirth-rank, GitHub at github.com/tirth1263.
 `;

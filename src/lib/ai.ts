@@ -48,15 +48,15 @@ export function localPortfolioAnswer(question: string) {
   }
 
   if (/skill|stack|tool|technology|language/.test(lower)) {
-    return "Tirth's strongest stack is Python, SQL, PyTorch, TensorFlow, OpenCV, Pandas, NumPy, Scikit-Learn, LLM workflows, prompt engineering, embeddings, RAG, Tableau, Excel, MATLAB, Linux workflows, AutoCAD, and SolidWorks.";
+    return "Tirth's strongest stack is Python, TypeScript, SQL, PyTorch, TensorFlow, OpenCV, Pandas, NumPy, Scikit-Learn, MCP agents, LangChain, LangGraph, RAG, voice AI agents, Nebius Token Factory, Tableau, Excel, Rhino 3D, Grasshopper, MATLAB, Linux workflows, AutoCAD, and SolidWorks.";
   }
 
   if (/experience|work|role|intern|job|researcher|lab/.test(lower)) {
     return "Tirth is currently a Robotics Design Lab Researcher at The Design School at ASU, supporting hands-on robotics, design, prototyping, innovation, creative learning, and research. He is also a Volumetric Innovation Fellow at ASU MESH Labs, with prior XR QA, AI, ML, and data analytics internship experience.";
   }
 
-  if (/project|portfolio|built|genai|llm|vision|robot/.test(lower)) {
-    return "Tirth's featured projects span three domains: robotics and deep learning projects like the VLM Knowledge Graph reasoning model, AI-assisted robotic design interface, and RAS 545 robotics systems work; ML/NLP/data projects like multimodal fake review detection, MLOps drift monitoring, and B2B competitor intelligence; and intelligent software systems like ApplyForge AI, Smart Scheduler Assistant, and an autonomous CI/CD failure patcher.";
+  if (/project|portfolio|built|genai|llm|vision|robot|mcp|agent|voice/.test(lower)) {
+    return "Tirth's featured projects span robotics, ML/data systems, and MCP/voice AI. The MCP agent highlights include GitHub MCP Agent, LangGraph MCP Agent, Doc-MCP, Enterprise MCP Database Server, AI Agent Discovery Agent, and Multi-Agent Orchestration System. He also showcases voice AI projects like VoxCode, LiveKit Voice Agent with Web Search, and Healthcare Voice Contact Center.";
   }
 
   const tokens = tokenise(question);
