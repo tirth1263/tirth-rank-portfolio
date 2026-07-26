@@ -141,6 +141,16 @@ export const projects = [
     codeUrl: "https://github.com/tirth1263/Rhino-3D-Projects"
   },
   {
+    title: "Rhino 3D Hot-Wire Projects",
+    year: "2026",
+    domain: "Robotics, Autonomous Systems & Deep Learning",
+    tags: ["Rhino 8", "Grasshopper", "C#", "Hot-Wire"],
+    summary:
+      "Created a collection of Rhino, Grasshopper, and C# workflows for generating and studying geometric hot-wire toolpaths, including surface, boundary-pair, centerline-twist, and multi-angle algorithms.",
+    impact: "Verified computational-fabrication workflows for hot-wire geometry and toolpath design",
+    codeUrl: "https://github.com/tirth1263/Rhino-3d-Hotwire-Projects"
+  },
+  {
     title: "Talk to Your DB",
     year: "2026",
     domain: "Machine Learning, NLP & Data Analytics",
@@ -269,6 +279,66 @@ export const projects = [
       "Built a production-minded clinic front-desk voice agent that handles appointments, FAQs, escalations, and supervisor handoff using real-time STT, LLM reasoning, and TTS.",
     impact: "Domain-specific voice automation for healthcare operations",
     codeUrl: "https://github.com/tirth1263/healthcare-voice-contact-center"
+  },
+  {
+    title: "ScaleKit Exa MCP Security",
+    year: "2026",
+    domain: "MCP Agents, Voice AI & Intelligent Systems",
+    tags: ["MCP", "OAuth 2.1", "FastAPI", "Exa"],
+    summary:
+      "Built a production-ready Exa Search MCP server secured by ScaleKit OAuth 2.1, with scoped tool access, auditable requests, Streamable HTTP transport, tests, and container deployment.",
+    impact: "Security-first web intelligence for production MCP clients",
+    codeUrl: "https://github.com/tirth1263/ScaleKit-Exa-MCP-Security"
+  },
+  {
+    title: "RepoBrief Docker E2B MCP Agent",
+    year: "2026",
+    domain: "MCP Agents, Voice AI & Intelligent Systems",
+    tags: ["E2B", "MCP", "OpenAI Agents", "Docker"],
+    summary:
+      "Developed a secure GitHub-to-Notion automation agent that runs official MCP servers inside disposable E2B sandboxes and destroys the isolated environment after every workflow.",
+    impact: "Ephemeral, least-exposure execution for cross-tool agent automation",
+    codeUrl: "https://github.com/tirth1263/docker-e2b-mcp-agent"
+  },
+  {
+    title: "Telemetry MCP Okahu",
+    year: "2026",
+    domain: "MCP Agents, Voice AI & Intelligent Systems",
+    tags: ["MCP", "Okahu", "Monocle", "FastAPI"],
+    summary:
+      "Created a self-healing agent that diagnoses and repairs a buggy Text-to-SQL service using production traces retrieved through Okahu's hosted MCP instead of local logs or guesswork.",
+    impact: "Evidence-driven autonomous debugging through observability telemetry",
+    codeUrl: "https://github.com/tirth1263/telemetry-mcp-okahu"
+  },
+  {
+    title: "AI Consultant Agent with Memory",
+    year: "2026",
+    domain: "MCP Agents, Voice AI & Intelligent Systems",
+    tags: ["OpenAI", "Tavily", "Memori", "Streamlit"],
+    summary:
+      "Built a research-grounded AI readiness advisor that combines company context, current case studies, cost and complexity analysis, and durable engagement memory into prioritized initiatives and a 90-day plan.",
+    impact: "Persistent, evidence-backed AI strategy planning for business leaders",
+    codeUrl: "https://github.com/tirth1263/ai-consultant-agent-with-memory"
+  },
+  {
+    title: "arXiv Researcher Agent with Memory",
+    year: "2026",
+    domain: "MCP Agents, Voice AI & Intelligent Systems",
+    tags: ["OpenAI Agents", "arXiv", "Memori", "Streamlit"],
+    summary:
+      "Built a memory-native research assistant that searches prior sessions, discovers scholarly work on arXiv, produces citation-oriented reports, and maintains a searchable archive across investigations.",
+    impact: "Long-running academic research workflows with persistent evidence and context",
+    codeUrl: "https://github.com/tirth1263/arXiv-researcher-agent-with-memory"
+  },
+  {
+    title: "Customer Support Voice Agent",
+    year: "2026",
+    domain: "MCP Agents, Voice AI & Intelligent Systems",
+    tags: ["Voice AI", "Firecrawl", "Memori", "Streamlit"],
+    summary:
+      "Created a company-agnostic support agent that crawls product documentation, grounds answers in indexed sources, remembers prior conversations, and responds with natural speech.",
+    impact: "Documentation-grounded voice support that adapts to any product knowledge base",
+    codeUrl: "https://github.com/tirth1263/customer-support-voice-agent"
   }
 ];
 
