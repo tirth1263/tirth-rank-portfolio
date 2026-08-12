@@ -151,44 +151,74 @@ export const projects = [
     codeUrl: "https://github.com/tirth1263/Rhino-3d-Hotwire-Projects"
   },
   {
-    title: "Talk to Your DB",
+    title: "Agentic RAG with Agno and GPT-5",
     year: "2026",
     domain: "Machine Learning, NLP & Data Analytics",
-    tags: ["TypeScript", "MySQL", "Nebius", "NL2SQL"],
+    tags: ["Agno", "GPT-5", "LanceDB", "RAG"],
     summary:
-      "Built an AI-powered MySQL query assistant that turns plain-English business questions into safe SQL, executes results, explains outputs, and supports CSV export.",
-    impact: "Natural-language analytics layer for business databases",
-    codeUrl: "https://github.com/tirth1263/talk-to-your-db"
+      "Built an agentic RAG app where GPT-5 decides when to search a URL-ingested knowledge base, reformulates retrieval queries, cites sources, and refuses unsupported answers.",
+    impact: "Agent-controlled retrieval workflow for trustworthy research assistants",
+    codeUrl: "https://github.com/tirth1263/Agentic-RAG-with-Agno-and-GPT-5"
   },
   {
-    title: "LangChain Data Agent PoC",
+    title: "Typed Agentic RAG with LlamaIndex",
     year: "2026",
     domain: "Machine Learning, NLP & Data Analytics",
-    tags: ["LangChain", "LangGraph", "SQLite", "Nebius"],
+    tags: ["LlamaIndex", "Pydantic", "LiteParse", "RAG"],
     summary:
-      "Created a compact natural-language-to-SQL data agent with schema scoping, query validation, follow-up handling, result summaries, and chart suggestions.",
-    impact: "Readable agent workflow for safe business data exploration",
-    codeUrl: "https://github.com/tirth1263/langchain-data-agent-poc"
+      "Created a citation-verified RAG system that validates every answer as a typed Pydantic object, checks verbatim quotes against source chunks, and refuses when evidence is missing.",
+    impact: "Structured, hallucination-resistant RAG for compliance-style documents",
+    codeUrl: "https://github.com/tirth1263/Agentic-typed-RAG-with-Llama-index"
   },
   {
-    title: "Multi-Modal E-Commerce Fake Review Detector",
+    title: "Enterprise Contextual RAG",
     year: "2026",
     domain: "Machine Learning, NLP & Data Analytics",
-    tags: ["FastAPI", "PyTorch", "Transformers", "Docker"],
+    tags: ["Contextual AI", "LMUnit", "Nebius", "Streamlit"],
     summary:
-      "Developed a fraud detection system that fuses review text, reviewer metadata, and product image signals with explainability and model-serving scaffolds.",
-    impact: "Multimodal ML architecture for trust and marketplace safety",
-    codeUrl: "https://github.com/tirth1263/multi-modal-e-commerce-fake-review-detector"
+      "Built a production-shaped document QA app with managed parsing, hybrid retrieval, reranking, page-level source attribution, answer-quality scoring, and optional Nebius enrichment.",
+    impact: "Enterprise-ready RAG workflow with verifiable sources and grading",
+    codeUrl: "https://github.com/tirth1263/Enterprise-Contextual-RAG"
   },
   {
-    title: "Real-Time MLOps Drift Monitoring System",
+    title: "GraphRAG with Neo4j",
     year: "2026",
     domain: "Machine Learning, NLP & Data Analytics",
-    tags: ["MLOps", "Firebase", "PSI Drift", "Monitoring"],
+    tags: ["GraphRAG", "Neo4j", "Cypher", "Nebius"],
     summary:
-      "Built a Firebase-first MLOps dashboard that serves a predictive model, simulates production drift, tracks quality metrics, and stores versioned artifacts.",
-    impact: "Production-minded ML monitoring with drift alerts and retraining history",
-    codeUrl: "https://github.com/tirth1263/real-time-ml-ops-drifting-and-monitoring-system"
+      "Turned unstructured documents into a property graph, extracted entities and relationships with strict JSON, generated Cypher queries, and answered with graph-backed evidence.",
+    impact: "Relationship-aware retrieval for questions that vector chunks miss",
+    codeUrl: "https://github.com/tirth1263/GraphRAG-With-Neo4J"
+  },
+  {
+    title: "Codebase Q&A RAG",
+    year: "2026",
+    domain: "Machine Learning, NLP & Data Analytics",
+    tags: ["LlamaIndex", "GitHub API", "Embeddings", "DeepSeek"],
+    summary:
+      "Built a repository-understanding assistant that indexes public GitHub codebases, caches vector indexes, streams grounded answers, and cites the exact files used.",
+    impact: "Developer onboarding and architecture discovery over real codebases",
+    codeUrl: "https://github.com/tirth1263/Codebase-QnA-RAG"
+  },
+  {
+    title: "LLM and RAG Debugger",
+    year: "2026",
+    domain: "Machine Learning, NLP & Data Analytics",
+    tags: ["RAG Evaluation", "WFGY", "Debugging", "Nebius"],
+    summary:
+      "Created a 16-mode diagnostic tool that maps messy LLM and RAG failures to reproducible problem categories, trace expectations, and prompt-layer repair guidance.",
+    impact: "Systematic failure analysis for retrieval and generation pipelines",
+    codeUrl: "https://github.com/tirth1263/LLM-and-RAG-Debugger-WFGY-16-Problem-Map"
+  },
+  {
+    title: "LiteParse Invoice and Receipt Auditor",
+    year: "2026",
+    domain: "Machine Learning, NLP & Data Analytics",
+    tags: ["LiteParse", "OCR", "Nebius", "Audit"],
+    summary:
+      "Built a local OCR and LLM audit tool that detects invoice math errors, duplicate charges, and missing fields, then pins each finding back to page-level bounding boxes.",
+    impact: "Evidence-pinned document intelligence for finance operations",
+    codeUrl: "https://github.com/tirth1263/LiteParse-Invoice-and-Receipt-Auditor"
   },
   {
     title: "GitHub MCP Agent",
@@ -281,6 +311,26 @@ export const projects = [
     codeUrl: "https://github.com/tirth1263/healthcare-voice-contact-center"
   },
   {
+    title: "Persistent Memory Agent",
+    year: "2026",
+    domain: "MCP Agents, Voice AI & Intelligent Systems",
+    tags: ["Agno", "Memori", "SQLite", "Nebius"],
+    summary:
+      "Built an Agno agent that extracts durable user memories from conversations, stores them by user and session, retrieves relevant facts across restarts, and streams rich responses.",
+    impact: "Long-term memory architecture for personalized agent experiences",
+    codeUrl: "https://github.com/tirth1263/persistent-memory-agent-agno"
+  },
+  {
+    title: "Smart Product Launch Agent",
+    year: "2026",
+    domain: "MCP Agents, Voice AI & Intelligent Systems",
+    tags: ["Agno", "Bright Data", "Memori", "MongoDB"],
+    summary:
+      "Built a multi-agent competitive-intelligence system that researches competitor launches, stores findings in persistent memory, cites visited sources, and turns evidence into launch decisions.",
+    impact: "Research-grade multi-agent workflow for product strategy",
+    codeUrl: "https://github.com/tirth1263/smart-product-launch-agent"
+  },
+  {
     title: "ScaleKit Exa MCP Security",
     year: "2026",
     domain: "MCP Agents, Voice AI & Intelligent Systems",
@@ -364,10 +414,15 @@ export const skillGroups = [
     skills: [
       "Prompt Engineering",
       "MCP Agents",
+      "Agno",
       "LangChain",
       "LangGraph",
+      "LlamaIndex",
       "RAG",
+      "Agentic RAG",
+      "GraphRAG",
       "Nebius Token Factory",
+      "OpenAI Agents SDK",
       "Voice AI Agents",
       "Human-in-the-loop AI"
     ]
@@ -382,6 +437,7 @@ export const skillGroups = [
       "OpenCV",
       "Deep Neural Networks",
       "Multimodal AI",
+      "Vision-Language Models",
       "Classification",
       "Anomaly Detection"
     ]
@@ -393,6 +449,10 @@ export const skillGroups = [
       "Data Cleaning",
       "Dataset Curation",
       "ETL Pipelines",
+      "Vector Databases",
+      "Neo4j",
+      "Contextual AI",
+      "LiteParse",
       "Tableau",
       "Excel",
       "Dashboarding",
@@ -406,6 +466,8 @@ export const skillGroups = [
       "Literature Review",
       "Empirical Methods",
       "Product Analytics",
+      "RAG Evaluation",
+      "Citation Verification",
       "Stakeholder Communication",
       "Technical Documentation",
       "Responsible AI"
@@ -423,6 +485,9 @@ export const skillGroups = [
       "MATLAB",
       "AutoCAD",
       "SolidWorks",
+      "Docker",
+      "FastAPI",
+      "OAuth 2.1",
       "Linux Workflows"
     ]
   }
@@ -491,7 +556,7 @@ Current role: Robotics Design Lab Researcher at The Design School at ASU, suppor
 Current role: Volumetric Innovation Fellow at ASU MESH Labs, supporting immersive and volumetric technology projects, data capture workflows, prototype development, calibration, testing, Python/OpenCV/Linux validation, and automation scripts.
 Previous role: XR Quality Assurance and Testing at ASU MESH Labs, performing functional and performance testing on XR applications, documenting defects, validating workflows, and improving immersive system reliability.
 Previous internships: Artificial Intelligence Intern at Codec Technologies India, Machine Learning Intern at Bacancy Technology, and Deloitte Data Analytics Virtual Internship via Forage.
-Technical skills include Python, TypeScript, SQL, Pandas, NumPy, SciPy, Scikit-Learn, PyTorch, TensorFlow, OpenCV, LLMs, MCP, LangChain, LangGraph, prompt engineering, RAG, voice AI agents, Tableau, Excel, MATLAB, Rhino 3D, Grasshopper, AutoCAD, SolidWorks, Linux workflows, and technical documentation.
-Featured projects include VLM Reasoning Model using Knowledge Graph, AI-Assisted Robotic Design Interface, Rhino 3D Projects, Talk to Your DB, LangChain Data Agent PoC, Multi-Modal E-Commerce Fake Review Detector, Real-Time MLOps Drift Monitoring System, GitHub MCP Agent, LangGraph MCP Agent, Doc-MCP Documentation RAG System, Enterprise MCP Database Server, AI Agent Discovery Agent, Multi-Agent Orchestration System, VoxCode Cursor Code Editor, LiveKit Voice Agent with Web Search, and Healthcare Voice Contact Center. These projects span robotics and autonomous systems, deep learning, machine learning, NLP, data analytics, MCP agents, voice AI, software engineering, and intelligent systems.
+Technical skills include Python, TypeScript, SQL, Pandas, NumPy, SciPy, Scikit-Learn, PyTorch, TensorFlow, OpenCV, LLMs, MCP, Agno, LangChain, LangGraph, LlamaIndex, prompt engineering, RAG, agentic RAG, GraphRAG, vector databases, Neo4j, Contextual AI, LiteParse, OpenAI Agents SDK, OAuth 2.1, Docker, FastAPI, voice AI agents, Tableau, Excel, MATLAB, Rhino 3D, Grasshopper, AutoCAD, SolidWorks, Linux workflows, RAG evaluation, citation verification, and technical documentation.
+Featured projects include VLM Reasoning Model using Knowledge Graph, AI-Assisted Robotic Design Interface, Rhino 3D Projects, Agentic RAG with Agno and GPT-5, Typed Agentic RAG with LlamaIndex, Enterprise Contextual RAG, GraphRAG with Neo4j, Codebase Q&A RAG, LLM and RAG Debugger, LiteParse Invoice and Receipt Auditor, GitHub MCP Agent, LangGraph MCP Agent, Doc-MCP Documentation RAG System, Enterprise MCP Database Server, AI Agent Discovery Agent, Multi-Agent Orchestration System, Persistent Memory Agent, Smart Product Launch Agent, ScaleKit Exa MCP Security, RepoBrief Docker E2B MCP Agent, VoxCode Cursor Code Editor, LiveKit Voice Agent with Web Search, and Healthcare Voice Contact Center. These projects span robotics and autonomous systems, deep learning, machine learning, NLP, data analytics, MCP agents, RAG systems, voice AI, software engineering, and intelligent systems.
 Contact: tirthrank.work@gmail.com, LinkedIn at linkedin.com/in/tirth-rank, GitHub at github.com/tirth1263.
 `;
