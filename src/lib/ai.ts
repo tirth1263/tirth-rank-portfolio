@@ -1,6 +1,6 @@
 import { getAI, getGenerativeModel, GoogleAIBackend } from "firebase/ai";
 import { firebaseApp } from "./firebase";
-import { portfolioContext } from "../data/portfolio";
+import { portfolioContext, workTimeline } from "../data/portfolio";
 
 export type ChatMode = "firebase-ai" | "local";
 
@@ -28,6 +28,9 @@ const localFacts = portfolioContext
   .map((line) => line.trim())
   .filter(Boolean);
 
+const currentWork = workTimeline.filter((item) => /present/i.test(item.period));
+const completedWork = workTimeline.filter((item) => !/present/i.test(item.period));
+
 function tokenise(input: string) {
   return input
     .toLowerCase()
@@ -51,8 +54,25 @@ export function localPortfolioAnswer(question: string) {
     return "Tirth's strongest stack is Python, TypeScript, SQL, PyTorch, TensorFlow, OpenCV, Pandas, NumPy, Scikit-Learn, MCP agents, LangChain, LangGraph, RAG, voice AI agents, Nebius Token Factory, Tableau, Excel, Rhino 3D, Grasshopper, MATLAB, Linux workflows, AutoCAD, and SolidWorks.";
   }
 
+  if (/current|currently|present|now|working/.test(lower) && /work|working|role|job|position|where/.test(lower)) {
+    return currentWork
+      .map(
+        (item) =>
+          `Tirth is currently a ${item.title} at ${item.company} in ${item.location} (${item.period}). ${item.bullets[0]}`
+      )
+      .join(" ");
+  }
+
   if (/experience|work|role|intern|job|researcher|lab/.test(lower)) {
-    return "Completed Role: Tirth completed his Robotics Design Lab Researcher role at The Design School at ASU in August 2026, where he supported hands-on robotics, design, prototyping, innovation, creative learning, and research. He is also a Volumetric Innovation Fellow at ASU MESH Labs, with prior XR QA, AI, ML, and data analytics internship experience.";
+    const currentSummary = currentWork
+      .map((item) => `Current role: ${item.title} at ${item.company} (${item.period}).`)
+      .join(" ");
+    const completedSummary = completedWork
+      .slice(0, 3)
+      .map((item) => `Completed role: ${item.title} at ${item.company} (${item.period}).`)
+      .join(" ");
+
+    return `${currentSummary} ${completedSummary}`.trim();
   }
 
   if (/project|portfolio|built|genai|llm|vision|robot|mcp|agent|voice/.test(lower)) {
@@ -87,6 +107,7 @@ export async function generatePortfolioAnswer(
   const prompt = `
 You are Tirth Rank's portfolio assistant. Answer in first person only when it sounds natural for a portfolio assistant, otherwise say "Tirth".
 Use only the provided context. Do not invent job titles, awards, metrics, links, or publications.
+When the visitor asks where Tirth is currently working, answer with only active Current role entries first. Do not lead with completed roles for current-work questions.
 Keep answers concise, useful, and recruiter-friendly.
 
 Context:
