@@ -109,6 +109,51 @@ export const work = [
   }
 ];
 
+const monthIndexes: Record<string, number> = {
+  Jan: 0,
+  Feb: 1,
+  Mar: 2,
+  Apr: 3,
+  May: 4,
+  Jun: 5,
+  Jul: 6,
+  Aug: 7,
+  Sep: 8,
+  Oct: 9,
+  Nov: 10,
+  Dec: 11
+};
+
+function parseMonthYear(value: string) {
+  const [month, year] = value.trim().split(/\s+/);
+  return Number(year) * 12 + (monthIndexes[month] ?? 0);
+}
+
+function getWorkTimeline(period: string) {
+  const [startPart, endPart] = period.split(" - ");
+  const isPresent = /present/i.test(endPart ?? "");
+  return {
+    isPresent,
+    start: parseMonthYear(startPart),
+    end: isPresent ? Number.POSITIVE_INFINITY : parseMonthYear(endPart ?? startPart)
+  };
+}
+
+export const workTimeline = [...work].sort((first, second) => {
+  const firstTimeline = getWorkTimeline(first.period);
+  const secondTimeline = getWorkTimeline(second.period);
+
+  if (firstTimeline.isPresent !== secondTimeline.isPresent) {
+    return firstTimeline.isPresent ? -1 : 1;
+  }
+
+  if (firstTimeline.end !== secondTimeline.end) {
+    return secondTimeline.end - firstTimeline.end;
+  }
+
+  return secondTimeline.start - firstTimeline.start;
+});
+
 export const projects = [
   {
     title: "VLM Reasoning Model using Knowledge Graph",

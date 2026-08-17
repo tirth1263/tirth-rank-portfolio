@@ -25,7 +25,7 @@ import {
   projects,
   publications,
   skillGroups,
-  work
+  workTimeline
 } from "./data/portfolio";
 
 const responsibilities = [
@@ -273,7 +273,7 @@ function App() {
             <h2>Work Experience</h2>
           </div>
           <div className="timeline">
-            {work.map((item, index) => {
+            {workTimeline.map((item, index) => {
               const Icon = item.icon;
               return (
                 <motion.article className="timeline-item" key={`${item.company}-${item.title}`} {...fadeUp} transition={{ ...baseTransition, delay: index * 0.04 }}>
