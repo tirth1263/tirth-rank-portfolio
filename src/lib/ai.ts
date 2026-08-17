@@ -52,7 +52,7 @@ export function localPortfolioAnswer(question: string) {
   }
 
   if (/experience|work|role|intern|job|researcher|lab/.test(lower)) {
-    return "Tirth completed his Robotics Design Lab Researcher role at The Design School at ASU in August 2026, where he supported hands-on robotics, design, prototyping, innovation, creative learning, and research. He is also a Volumetric Innovation Fellow at ASU MESH Labs, with prior XR QA, AI, ML, and data analytics internship experience.";
+    return "Completed Role: Tirth completed his Robotics Design Lab Researcher role at The Design School at ASU in August 2026, where he supported hands-on robotics, design, prototyping, innovation, creative learning, and research. He is also a Volumetric Innovation Fellow at ASU MESH Labs, with prior XR QA, AI, ML, and data analytics internship experience.";
   }
 
   if (/project|portfolio|built|genai|llm|vision|robot|mcp|agent|voice/.test(lower)) {
