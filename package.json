@@ -6,6 +6,8 @@
   "scripts": {
     "dev": "vite --host 0.0.0.0",
     "build": "tsc -b && vite build",
+    "deploy": "npm run build && firebase deploy --only hosting --project tirth-rank-portfolio",
+    "firebase:login": "firebase login",
     "preview": "vite preview --host 0.0.0.0",
     "typecheck": "tsc -b"
   },
@@ -32,6 +34,7 @@
   "devDependencies": {
     "@types/react": "^19.2.15",
     "@types/react-dom": "^19.2.3",
+    "firebase-tools": "^15.27.0",
     "playwright": "^1.60.0"
   }
 }
